@@ -18,7 +18,7 @@
                     <div class="lists js-banner owl-carousel owl-theme">
                     @for($i = 1; $i <= 5; $i ++)
                        <a>
-                           <img src="https://media-kyna.cdn.vccloud.vn/uploads/banners/981/img/mobile_image_url-1603436048.png" alt="">
+                           <img src="{{ asset('images/banner.png') }}" alt="">
                         </a>
                     @endfor
                 </div>
@@ -29,7 +29,7 @@
                         @for($i = 1 ; $i <=3; $i ++)
                             <div class="item item-3">
                                 <a href="">
-                                    <img src="https://media-kyna.cdn.vccloud.vn/uploads/banners/909/img/mobile_image_url-1600244244.jpg" alt="">
+                                    <img src="{{ asset('images/banner_bottom.jpg') }}" alt="">
                                 </a>
                             </div>
                         @endfor

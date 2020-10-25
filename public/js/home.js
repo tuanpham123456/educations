@@ -14445,6 +14445,7 @@ __webpack_require__.r(__webpack_exports__);
 var Home = {
   init: function init() {
     this.runBanner();
+    this.runTags();
   },
   runBanner: function runBanner() {
     $('.js-banner').owlCarousel({
@@ -14463,6 +14464,15 @@ var Home = {
           items: 1
         }
       }
+    });
+  },
+  runTags: function runTags() {
+    $('.js-tags').owlCarousel({
+      animateOut: 'slideOutDown',
+      animateIn: 'flipInX',
+      items: 5,
+      smartSpeed: 450,
+      navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
     });
   }
 };

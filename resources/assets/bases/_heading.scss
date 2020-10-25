@@ -1,9 +1,26 @@
 .heading {
-    color: white;
+    // color: white;
     margin: 10px 0;
     &-h2 {
         font-size: 20px;;
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: #50ad4e;
+            width: 150px;
+            height: 3px;
+        }
+        p{
+            font-size: 14px;
+        }
     }
+    
     &-bold {
         font-weight: bold;
     }
