@@ -14496,6 +14496,16 @@ var Home = {
       smartSpeed: 450,
       navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
     });
+    $('.js-lists-lecture').owlCarousel({
+      loop: false,
+      dots: false,
+      nav: false,
+      animateOut: 'slideOutDown',
+      animateIn: 'flipInX',
+      items: 3,
+      smartSpeed: 450,
+      navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
+    });
   }
 };
 $(function () {
