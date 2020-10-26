@@ -46,7 +46,19 @@ var Home = {
             navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
 
         })
-    }
+        $('.js-tags-home').owlCarousel({
+            loop:false,
+            dots:false,
+            nav:false,
+            animateOut: 'slideOutDown',
+            animateIn: 'flipInX',
+            items:6,
+            smartSpeed:450,
+            navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+
+        })
+    },
+
 }
 $(function(){
     Home.init()
