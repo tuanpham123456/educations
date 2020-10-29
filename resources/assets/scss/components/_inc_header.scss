@@ -50,9 +50,9 @@
             text-decoration: none;
             i{
                 margin-right:10px;
-                color:whitel
+                color:white;
             }
-               
+
         }
         .cart{
             position: relative;
@@ -74,7 +74,7 @@
             color:#50ad4e;
             font-size: 15px;
             padding: 5px 10px;
-            
+
             a{
                 width: 30px;
                 height: 30px;
@@ -82,7 +82,7 @@
                 display: inline-block;
                 text-align: center;
                 line-height: 30px;
-               
+
             }
             a.login{
                 display: inline-block;
@@ -95,14 +95,51 @@
             .facebook{
                 background: #3B5998;
                 color: white;
-            } 
+            }
             .google{
                 color: white;
                 background: #dd4b39;
             }
-           
+
         }
     }
-    
-    
+
+
+}
+.header-button{
+    .box-category{
+        width: 270px;
+        a{
+            color: #606060;
+            font-size: 15px;
+            font-weight: 500;
+            white-space: nowrap;
+            text-transform: uppercase;
+            i{
+                margin-right: 10px;
+            }
+        }
+    }
+    .box-right{
+        width: calc(100% - 270px);
+        display: inline;
+        text-align: right;
+        a{
+            color: #606060;
+            font-size: 15px;
+            font-weight: 500;
+            white-space: nowrap;
+            display: inline-block;
+            padding: 5px 0;
+            margin: 0 10px;
+            i{
+                margin-right: 5px;
+                color: #50ad4e;
+            }
+            &:hover{
+                cursor: pointer;
+                color: #50ad4e;
+            }
+        }
+    }
 }

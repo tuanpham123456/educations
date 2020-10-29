@@ -1937,7 +1937,7 @@ a {
 
 .header-right .btn-cdo i {
   margin-right: 10px;
-  color: whitel;
+  color: white;
 }
 
 .header-right .cart {
@@ -1991,6 +1991,48 @@ a {
 .header-right .auth .google {
   color: white;
   background: #dd4b39;
+}
+
+.header-button .box-category {
+  width: 270px;
+}
+
+.header-button .box-category a {
+  color: #606060;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.header-button .box-category a i {
+  margin-right: 10px;
+}
+
+.header-button .box-right {
+  width: calc(100% - 270px);
+  display: inline;
+  text-align: right;
+}
+
+.header-button .box-right a {
+  color: #606060;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 5px 0;
+  margin: 0 10px;
+}
+
+.header-button .box-right a i {
+  margin-right: 5px;
+  color: #50ad4e;
+}
+
+.header-button .box-right a:hover {
+  cursor: pointer;
+  color: #50ad4e;
 }
 
 footer {
