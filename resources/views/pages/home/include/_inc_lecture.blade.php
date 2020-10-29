@@ -15,10 +15,10 @@
                         <h6>Tuan Pham</h6>
                         <p class="info-auth"><span class="icon"><i class="fa fas fa-briefcase"></i></span> <span class="name">Trung tâm đào tạo sáng lập bởi TS Nguyễn Hoàng Khắc Hiếu</span></p>
                     </div>
-                    <div class="dashboard">
+                    <div class="dashboard flex flex-jc-sb">
                         @for($j = 1; $j <= 3; $j++)
-                            <div class="box-item">
-                                <span>Nội dung</span>
+                            <div class="box-item flex flex-d">
+                                <span class="mb10">Nội dung</span>
                                 <span>100</span>
                             </div>
                         @endfor
