@@ -1262,8 +1262,8 @@ slide is-expanded side-menu__item {
 }
 
 .app-sidebar .slide-menu a:before {
-  content: "\e92f";
-  font-family: 'feather' !important;
+  content: "\f105";
+  font: normal normal normal 14px/1 FontAwesome;
   position: absolute;
   top: 9px;
   left: 27px;
@@ -1342,6 +1342,10 @@ slide is-expanded side-menu__item {
     margin: 0;
     text-align: left;
     border-radius: 0;
+  }
+  .side-menu__label i{
+      font-size: 20px;
+      margin-right: 5px;
   }
   .app.sidebar-mini.sidenav-toggled-open .slide-menu {
     max-height: 0;
