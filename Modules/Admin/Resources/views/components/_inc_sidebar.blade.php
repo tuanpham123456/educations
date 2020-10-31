@@ -19,22 +19,26 @@
             </div>
         </div>
         <ul class="side-menu">
-            <li class="slide">
-                <a class="side-menu__item" href="index">
-                    <span class="side-menu__label"><i class="la la-tachometer-alt"></i> Tổng quan</span>
-                </a>
-            </li>
-            <li class="slide">
-                <a class="side-menu__item" data-toggle="slide" href="index.html#">
-                    <span class="side-menu__label"><i class="la la-book-open"></i>  Khóa học</span>
-                    <i class="las la-chevron-circle-down"></i>                </a>
-                <ul class="slide-menu">
-                    <li><a class="slide-item" href="cards">Danh mục</a></li>
-                    <li><a class="slide-item" href="cards">Từ khóa</a></li>
+            @foreach(config('setting_admin.sidebar') as $menus)
+                <li class="slide">
+                    <a class="side-menu__item" {{isset($menus['sub']) ? 'data-toggle=slide' : '' }}
+                       href="{{ isset($menus['sub']) ? '#' :route($menus['route']) }}" title="{{ $menus['name'] }}">
+                        <span class="side-menu__label"><i class="{{ $menus['class-icon'] }}"></i> {{ $menus['name'] }}</span>
+                        @if(isset($menus['sub']))
+                            <i class="las la-chevron-circle-down"></i>
+                        @endif
+                    </a>
+                    @if(isset($menus['sub']))
+                        <ul class="slide-menu">
+                            @foreach($menus['sub'] as $menu)
+                                <li><a class="slide-item" href="{{ route($menu['route']) }}" title="{{ $menu['name'] }}">{{ $menu['name'] }}</a></li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </li>
 
+            @endforeach
 
-                </ul>
-            </li>
         </ul>
     </div>
 </aside>
