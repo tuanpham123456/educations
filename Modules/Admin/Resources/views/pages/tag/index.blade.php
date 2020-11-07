@@ -11,10 +11,11 @@
                 </div>
                 <div class="d-flex my-xl-auto right-content">
                     <div class="pr-1 mb-3 mb-xl-0">
-                        <a href="{{ route('get_admin.tag.create') }}"class="btn btn-info  mr-2">Thêm mới <i class="fa fa-plus-circle"></i></a>
+                        <a href="{{ route('get_admin.tag.create') }}"class="btn btn-info  mr-2">Thêm mới <i class="la la-plus-circle"></i></a>
                     </div>
                 </div>
             </div>
+
             <!-- breadcrumb -->
             <!-- row -->
             <div class="row">
@@ -39,8 +40,8 @@
                                         <td>Associate Developer</td>
                                         <td>$450,870</td>
                                         <td>
-                                            <a href="" class="btn btn-xs btn-info"><i class="fa fa-edit"></i></a>
-                                            <a href="" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
+                                            <a href="" class="btn btn-xs btn-info"><i class="la la-edit"></i></a>
+                                            <a href="" class="btn btn-xs btn-danger"><i class="la la-trash"></i></a>
 
                                         </td>
                                     </tr>

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);/*
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);@import url(https://unpkg.com/filepond/dist/filepond.css);@import url(https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css);/*
 == malihu jquery custom scrollbar plugin ==
 Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
 */
@@ -90581,5 +90581,29 @@ readers do not read off random characters that represent icons */
 @charset "UTF-8";
 .btn-xs {
   padding: 3px 10px !important;
+}
+
+.view-seo-title {
+  min-height: 21px;
+  display: block;
+  font-size: 18px;
+  color: #1a0dab;
+  line-height: 21px;
+  margin-bottom: 2px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.view-seo-slug {
+  display: block;
+  word-wrap: break-word;
+  color: #006621;
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 2px;
+}
+
+.hide {
+  display: none;
 }
 

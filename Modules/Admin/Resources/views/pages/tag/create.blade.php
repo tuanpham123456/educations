@@ -11,14 +11,13 @@
             </div>
             <div class="d-flex my-xl-auto right-content">
                 <div class="pr-1 mb-3 mb-xl-0">
-                    <a href="{{ route('get_admin.tag.index') }}" class="btn btn-danger  mr-2"><i class="fa fa-history"></i> Quay lại</a>
+                    <a href="{{ route('get_admin.tag.index') }}" class="btn btn-danger  mr-2"><i class="la la-undo"></i> Trở về</a>
                 </div>
             </div>
         </div>
         <!-- breadcrumb -->
         <!-- row -->
-        <div class="row">
-        </div>
-        <!-- row closed -->
+       @include('admin::pages.tag.form')
     </div>
 @stop
+

@@ -23,16 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87263d7a-f976-42ff-bb3e-ac35780a9209" name="Default Changelist" comment="mix backend admin">
-      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/tag/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/tag/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/tag/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/tag/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/components/_inc_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/components/_inc_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/setting_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/setting_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/tag/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/tag/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/tag/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/tag/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/tag/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/tag/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css_admin/admin_dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css_admin/admin_dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/valex/js/pages/admin_dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/valex/js/pages/admin_dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/valex/scss/components/custome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/valex/scss/components/custome.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/valex/scss/pages/admin_dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/valex/scss/pages/admin_dashboard.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,15 +196,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\educations\resources\assets\valex\js\components" />
+      <recent name="C:\xampp\htdocs\educations\resources\assets\valex\scss\components" />
+      <recent name="C:\xampp\htdocs\educations\public" />
+      <recent name="C:\xampp\htdocs\educations\resources\views\pages\home\include" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\educations\public\fonts" />
       <recent name="C:\xampp\htdocs\educations\public" />
       <recent name="C:\xampp\htdocs\educations\resources\assets\valex\js" />
       <recent name="C:\xampp\htdocs\educations\resources\assets\valex" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\educations\public" />
-      <recent name="C:\xampp\htdocs\educations\resources\views\pages\home\include" />
     </key>
   </component>
   <component name="RunManager">
@@ -237,7 +240,14 @@
       <workItem from="1603955005330" duration="6465000" />
       <workItem from="1603971570891" duration="6742000" />
       <workItem from="1603978404373" duration="22000" />
-      <workItem from="1604142335655" duration="6395000" />
+      <workItem from="1604142335655" duration="6697000" />
+      <workItem from="1604198312231" duration="5259000" />
+      <workItem from="1604246611058" duration="78000" />
+      <workItem from="1604586787478" duration="2956000" />
+      <workItem from="1604633609721" duration="191000" />
+      <workItem from="1604646475836" duration="1230000" />
+      <workItem from="1604655097244" duration="9304000" />
+      <workItem from="1604668316744" duration="165000" />
     </task>
     <task id="LOCAL-00001" summary="Css item course">
       <created>1603634294026</created>
@@ -295,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603976648082</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Admin">
+      <created>1604149025305</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604149025305</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +340,8 @@
     <MESSAGE value="footer" />
     <MESSAGE value="nav header" />
     <MESSAGE value="config (setting_admin.php)" />
-    <option name="LAST_COMMIT_MESSAGE" value="config (setting_admin.php)" />
+    <MESSAGE value="Admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="292" key="#Composer" timestamp="1603628582271">
@@ -354,14 +372,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603700798100" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603976651077">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1604149029665">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603976651077" />
-    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603957922331">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1604149029665" />
+    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604647215444">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1603957922331" />
+    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1604647215444" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603638299034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -370,15 +390,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="478" y="11" width="579" height="801" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603638286623" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1603955216936">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="425" y="189" key="run.anything.popup" timestamp="1604589344377">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603955216936" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1604147847033">
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1604589344377" />
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1604667281697">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603975488859" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1604147847033" />
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1604667281697" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

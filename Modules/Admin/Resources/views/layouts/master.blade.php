@@ -15,7 +15,6 @@
     <link rel="icon" href="{{ asset('img/brand/favicon.png') }}" type="image/x-icon"/>
     <!-- Icons css -->
     <link href="assets/css/icons.css" rel="stylesheet">
-
     <link rel="stylesheet" href="{{ asset('css_admin/admin_dashboard.css') }}">
 </head>
 <body class="main-body app sidebar-mini">
@@ -137,8 +136,16 @@
 <!-- main-content closed -->
 <!-- Sidebar-right-->
     @include('admin::components._inc_siderbar_right')
-
     @include('admin::components._inc_footer')
-<script src="{{ asset('js_admin/admin_dashboard.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script><script src="{{ asset('js_admin/admin_dashboard.js') }}"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
+<script>
+    FilePond.registerPlugin(FilePondPluginImagePreview);
+    FilePond.create(document.querySelector('input[type="file"]'))
+</script>
+
 </body>
 </html>
