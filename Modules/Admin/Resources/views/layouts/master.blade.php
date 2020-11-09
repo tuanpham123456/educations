@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,7 @@
     <!-- Icons css -->
     <link href="assets/css/icons.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css_admin/admin_dashboard.css') }}">
+
 </head>
 <body class="main-body app sidebar-mini">
 <!-- Start Switcher -->
@@ -137,7 +139,9 @@
 <!-- Sidebar-right-->
     @include('admin::components._inc_siderbar_right')
     @include('admin::components._inc_footer')
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script><script src="{{ asset('js_admin/admin_dashboard.js') }}"></script>
+<script src="{{ asset('js_admin/admin_dashboard.js') }}"></script>
+{{--<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script><script src="{{ asset('js_admin/admin_dashboard.js') }}"></script>--}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
 <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
@@ -145,7 +149,49 @@
 <script>
     FilePond.registerPlugin(FilePondPluginImagePreview);
     FilePond.create(document.querySelector('input[type="file"]'))
-</script>
 
+</script>
+<script>
+    $(".js-action-seo").click(function(event){
+        event.preventDefault()
+        $(".box-seo").toggleClass('hide')
+    })
+    function to_slug(str)
+    {
+        // Chuyển hết sang chữ thường
+        str = str.toLowerCase();
+        // xóa dấu
+        str = str.replace(/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/g, 'a');
+        str = str.replace(/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/g, 'e');
+        str = str.replace(/(ì|í|ị|ỉ|ĩ)/g, 'i');
+        str = str.replace(/(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)/g, 'o');
+        str = str.replace(/(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)/g, 'u');
+        str = str.replace(/(ỳ|ý|ỵ|ỷ|ỹ)/g, 'y');
+        str = str.replace(/(đ)/g, 'd');
+        // Xóa ký tự đặc biệt
+        str = str.replace(/([^0-9a-z-\s])/g, '');
+        // Xóa khoảng trắng thay bằng ký tự -
+        str = str.replace(/(\s+)/g, '-');
+        // xóa phần dự - ở đầu
+        str = str.replace(/^-+/g, '');
+        // xóa phần dư - ở cuối
+        str = str.replace(/-+$/g, '');
+        // return
+        return str;
+    }
+
+    $(".keypress-count").keyup(function (event) {
+        event.preventDefault()
+        let $this           = $(this)
+        let value           = $this.val()
+        let slug            = to_slug(value)
+        let elementSlug     = $this.attr('data-slug')
+        let elementTitleSeo = $this.attr('data-title-seo')
+        $(elementSlug).val(to_slug(value))
+        $(elementTitleSeo).val(value)
+        $(elementTitleSeo).text(value)
+        $(elementSlug).text(slug)
+    })
+</script>
 </body>
 </html>

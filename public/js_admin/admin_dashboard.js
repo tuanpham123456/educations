@@ -19767,6 +19767,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // import './../../assets/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js'
+// import SEO from '../components/_inc_seo'
+//
+// $(function(){
+//     SEO.init()
+// })
 
 /***/ }),
 

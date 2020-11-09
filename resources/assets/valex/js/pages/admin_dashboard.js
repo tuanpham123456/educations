@@ -14,4 +14,8 @@ import './../../assets/js/custom.js'
 import './../../assets/plugins/side-menu/sidemenu.js'
 import './../../assets/switcher/js/switcher.js'
 // import './../../assets/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js'
-
+// import SEO from '../components/_inc_seo'
+//
+// $(function(){
+//     SEO.init()
+// })
