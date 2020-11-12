@@ -5,11 +5,10 @@ namespace Modules\Admin\Http\Controllers;
 use App\Models\Education\Tag;
 use Carbon\Carbon;
 use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+
 use Modules\Admin\Http\Requests\AdminTagRequest;
 
-class AdminTagController extends Controller
+class AdminTagController extends AdminController
 {
     /**
      * Display a listing of the resource.
@@ -29,6 +28,13 @@ class AdminTagController extends Controller
         if(!$request->t_title_seo) $data['t_title_seo'] = $request->t_name;
         if(!$request->t_description_seo) $data['t_description_seo'] = $request->t_name;
         $tagId = Tag::insertGetId($data);
+        if($tagId){
+//      thêm thành công show toast
+            $this->showMessagesSuccess();
+            return redirect()->route('get_admin.tag.index');
+        }
+//        Xử lý thất bại show toast
+        $this->showMessagesError();
         return redirect()->back();
     }
 
