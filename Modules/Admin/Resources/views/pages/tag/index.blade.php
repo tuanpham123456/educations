@@ -52,9 +52,11 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>{{ $item->t_sort }}</td>
                                         <td>
-                                            {{ $item->t_status }}
+                                            <span class="badge badge-info">{{ $item->t_sort }}</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge {{ $item->getStatus($item->status)['class'] }}">{{ $item->getStatus($item->status)['name'] }}</span>
                                         </td>
                                         <td>{{ $item->created_at }}</td>
                                         <td>

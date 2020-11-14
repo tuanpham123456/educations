@@ -15,10 +15,12 @@ import './../../assets/js/custom.js'
 import './../../assets/plugins/side-menu/sidemenu.js'
 import './../../assets/switcher/js/switcher.js'
 
+import FilePondUpload from '../components/_init_filepond'
 import SEO from '../components/_inc_seo'
 import Message from "../../../components/_inc_run_message";
 import Delete from "../components/_inc_delete";
 $(function (){
+    FilePondUpload.init()
     SEO.init()
     Message.init()
     Delete.init()
