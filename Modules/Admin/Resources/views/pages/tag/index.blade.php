@@ -29,23 +29,42 @@
                                         <th>ID</th>
                                         <th>Name</th>
                                         <th>SEO</th>
+                                        <th>Sort</th>
+                                        <th>Status</th>
                                         <th>Time</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
+                                    @forelse($tags as $item)
                                     <tbody>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>Joan Powell</td>
-                                        <td>Associate Developer</td>
-                                        <td>$450,870</td>
+                                        <th scope="row">{{$item->id}}</th>
+                                        <td>{{ $item->t_name }}</td>
                                         <td>
-                                            <a href="" class="btn btn-xs btn-info"><i class="la la-edit"></i></a>
-                                            <a href="" class="btn btn-xs btn-danger"><i class="la la-trash"></i></a>
-
+                                            <div class="existed-seo-meta">
+                                                <span class="page-title-seo title-seo">{{ $item->t_title_seo }}</span>
+                                                <div class="page-url-seo ws nm">
+                                                    <p><span class="slug">http://tuanpham/{{ $item->t_slug }}.com</span></p>
+                                                </div>
+                                                <div class="ws-nm">
+                                                    <span style="color:#70757a">{{ $item->created_at }} -</span>
+                                                    <span class="page-description-seo description_seo">{{ $item->t_description_seo }}</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>{{ $item->t_sort }}</td>
+                                        <td>
+                                            {{ $item->t_status }}
+                                        </td>
+                                        <td>{{ $item->created_at }}</td>
+                                        <td>
+                                            <a href="{{ route('get_admin.tag.edit',$item->id) }}" class="btn btn-xs btn-info"><i class="la la-edit"></i></a>
+                                            <a href="{{ route('get_admin.tag.delete',$item->id) }}" class="btn btn-xs js-delete btn-danger "><i class="la la-trash"></i></a>
                                         </td>
                                     </tr>
-
+                                    @empty
+                                        <p>Dữ liệu chưa được cập nhật</p>
+                                        @endforelse
                                     </tbody>
                                 </table>
                             </div>

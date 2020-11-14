@@ -7,14 +7,14 @@
                     <div class="form-group">
                         <label class="required"for="exampleInputEmail1"> Name <span>(*)</span></label>
                         <input type="text" class="form-control keypress-count" data-title-seo=".title-seo" data-slug=".slug"
-                              value="{{ old('t_name') }}" id="inputName" name="t_name"  placeholder="">
+                              value="{{ old('t_name',$tags->t_name ?? '') }}" id="inputName" name="t_name"  placeholder="">
                         @if($errors->first('t_name'))
                             <span class="text-danger">{{ $errors->first('t_name') }}</span>
                         @endif
                     </div>
                     <div class="form-group">
                         <label class="required" for="exampleInputEmail1">Slug <span>(*)</span></label>
-                        <input type="text" class="form-control slug"  value="{{ old('t_slug') }}" name="t_slug"  placeholder="">
+                        <input type="text" class="form-control slug"  value="{{ old('t_slug',$tags->t_slug ?? '') }}" name="t_slug"  placeholder="">
                         @if($errors->first('t_slug'))
                             <span class="text-danger">{{ $errors->first('t_slug') }}</span>
                         @endif
@@ -35,12 +35,12 @@
                 <div class="card-body pt-3 box-seo hide" >
                     <div class="form-group">
                         <label class="required" for="exampleInputEmail1"> Title Seo <span>(*)</span></label>
-                        <input type="text" class="form-control title-seo" value="{{ old('t_title_seo') }}" name="t_title_seo"  placeholder="">
+                        <input type="text" class="form-control title-seo" value="{{ old('t_title_seo',$tags->t_title_seo ?? '') }}" name="t_title_seo"  placeholder="">
                     </div>
 
                     <div class="form-group">
                         <label class="required" for="exampleInputEmail1">Description SEO <span>(*)</span></label>
-                        <input type="text" class="form-control"  value="{{ old('t_description_seo') }}" name="t_description_seo"  placeholder="">
+                        <input type="text" class="form-control"  value="{{ old('t_description_seo',$tags->t_description_seo ?? '') }}" name="t_description_seo"  placeholder="">
                     </div>
                 </div>
             </div>

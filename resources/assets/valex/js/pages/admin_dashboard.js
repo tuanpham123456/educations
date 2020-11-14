@@ -17,7 +17,9 @@ import './../../assets/switcher/js/switcher.js'
 
 import SEO from '../components/_inc_seo'
 import Message from "../../../components/_inc_run_message";
+import Delete from "../components/_inc_delete";
 $(function (){
     SEO.init()
     Message.init()
+    Delete.init()
 })
