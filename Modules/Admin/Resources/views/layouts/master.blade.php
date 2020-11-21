@@ -13,6 +13,8 @@
     <title> Valex -  Premium dashboard ui bootstrap rwd admin html5 template </title>
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('img/brand/favicon.png') }}" type="image/x-icon"/>
+    <meta name="csrf-token" id="csrf_token" content="{{ csrf_token() }}">
+
     <!-- Icons css -->
     <link href="assets/css/icons.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css_admin/admin_dashboard.css') }}">
@@ -22,6 +24,9 @@
             var MESSAGE = "{{ session('toastr.message') }}"
         </script>
     @endif
+    <script>
+        var URL_UPLOAD = '{{ route('post_ajax_admin.uploads') }}'
+    </script>
 </head>
 <body class="main-body app sidebar-mini">
 <div class="switcher-wrapper ">

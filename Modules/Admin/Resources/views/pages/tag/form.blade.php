@@ -40,7 +40,7 @@
 
                     <div class="form-group">
                         <label class="required" for="exampleInputEmail1">Description SEO <span>(*)</span></label>
-                        <input type="text" class="form-control"  value="{{ old('t_description_seo',$tags->t_description_seo ?? '') }}" name="t_description_seo"  placeholder="">
+                        <input type="text" class="form-control title-seo"  value="{{ old('t_description_seo',$tags->t_description_seo ?? '') }}" name="t_description_seo"  placeholder="">
                     </div>
                 </div>
             </div>
@@ -80,6 +80,7 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1"> Avatar </label>
                         <input type="file" class="filepond" name="avatar">
+                        <input type="hidden" name="t_avatar" id="avatar_uploads">
                     </div>
                 </div>
             </div>

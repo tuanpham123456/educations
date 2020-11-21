@@ -1,5 +1,5 @@
 import Toastr from 'toastr';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 var Delete = {
     init : function ()

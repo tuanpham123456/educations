@@ -33,6 +33,7 @@ class AdminTagController extends AdminController
         $data['created_at']     = Carbon::now();
         if(!$request->t_title_seo) $data['t_title_seo'] = $request->t_name;
         if(!$request->t_description_seo) $data['t_description_seo'] = $request->t_name;
+
         $tagId = Tag::insertGetId($data);
         if($tagId){
 //      thêm thành công show toast
@@ -57,7 +58,6 @@ class AdminTagController extends AdminController
 
         if(!$request->t_title_seo) $data['t_title_seo'] = $request->t_name;
         if(!$request->t_description_seo) $data['t_description_seo'] = $request->t_name;
-
         $tags->fill($data)->save();
         $this->showMessagesSuccess("Cập nhật thành công");
         return redirect()->route('get_admin.tag.index');

@@ -40093,7 +40093,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var filepond__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! filepond */ "./node_modules/filepond/dist/filepond.js");
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var filepond__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! filepond */ "./node_modules/filepond/dist/filepond.js");
 /* harmony import */ var filepond__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(filepond__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var filepond_plugin_image_preview__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! filepond-plugin-image-preview */ "./node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js");
 /* harmony import */ var filepond_plugin_image_preview__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(filepond_plugin_image_preview__WEBPACK_IMPORTED_MODULE_1__);
@@ -40101,11 +40101,30 @@ __webpack_require__.r(__webpack_exports__);
 
 var FilePondUpload = {
   init: function init() {
+    filepond__WEBPACK_IMPORTED_MODULE_0__["setOptions"]({
+      server: {
+        url: URL_UPLOAD,
+        process: {
+          // url: '',
+          method: 'POST',
+          withCredentials: false,
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          },
+          timeout: 7000,
+          onload: function onload(response) {
+            $("#avatar_uploads").val(response);
+          },
+          onerror: null
+        }
+      }
+    });
     filepond__WEBPACK_IMPORTED_MODULE_0__["registerPlugin"](filepond_plugin_image_preview__WEBPACK_IMPORTED_MODULE_1___default.a);
     filepond__WEBPACK_IMPORTED_MODULE_0__["create"](document.querySelector('input[type="file"]'));
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (FilePondUpload);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 

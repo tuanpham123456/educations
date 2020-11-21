@@ -34,5 +34,8 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/','AdminTeacherController@index')->name('get_admin.teacher.index');
     });
 
+    Route::prefix('ajax')->namespace('Ajax')->group(function (){
+        Route::post('/upload/image','AdminAjaxUploadImageController@processUpload')->name('post_ajax_admin.uploads');
+    });
 });
 
