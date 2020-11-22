@@ -40105,7 +40105,6 @@ var FilePondUpload = {
       server: {
         url: URL_UPLOAD,
         process: {
-          // url: '',
           method: 'POST',
           withCredentials: false,
           headers: {

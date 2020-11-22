@@ -4,7 +4,7 @@ namespace Modules\Admin\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AdminTagRequest extends FormRequest
+class AdminCategoryRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -14,19 +14,20 @@ class AdminTagRequest extends FormRequest
     public function rules()
     {
         return [
-            't_name'    => 'required',
-            't_slug'    => 'required|unique:tags,t_slug,'.$this->id,
+            'c_name'    => 'required',
+            'c_slug'    => 'required|unique:categories,c_slug,'.$this->id,
+            'c_icon'    => 'required',
         ];
     }
     public function messages()
     {
         return [
-            't_name.required' => "Dữ liệu không được để trống",
-            't_slug.required' => "Dữ liệu không được để trống",
-            't_slug.unique'   => "Slug tồn tại"
+            'c_name.required' => "Dữ liệu không được để trống",
+            'c_slug.required' => "Dữ liệu không được để trống",
+            'c_slug.unique'   => "Slug tồn tại",
+            'c_icon.required' => "Dữ liệu không được để trống",
         ];
     }
-
     /**
      * Determine if the user is authorized to make this request.
      *

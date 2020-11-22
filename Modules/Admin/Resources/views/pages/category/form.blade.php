@@ -5,19 +5,38 @@
             <div class="card  box-shadow-0">
                 <div class="card-body pt-3">
                     <div class="form-group">
-                        <label class="required"for="exampleInputEmail1"> Name <span>(*)</span></label>
+                        <label class="required" for="exampleInputEmail1"> Name <span>(*)</span></label>
                         <input type="text" class="form-control keypress-count" data-title-seo=".title-seo" data-slug=".slug"
-                              value="{{ old('t_name',$tags->t_name ?? '') }}" id="inputName" name="c_name"  placeholder="">
-                        @if($errors->first('t_name'))
-                            <span class="text-danger">{{ $errors->first('t_name') }}</span>
+                               value="{{ old('c_name',$category->c_name ?? '') }}" id="inputName" name="c_name"  >
+                        @if($errors->first('c_name'))
+                            <span class="text-danger">{{ $errors->first('c_name') }}</span>
                         @endif
                     </div>
                     <div class="form-group">
                         <label class="required" for="exampleInputEmail1">Slug <span>(*)</span></label>
-                        <input type="text" class="form-control slug"  value="{{ old('t_slug',$tags->t_slug ?? '') }}" name="t_slug"  placeholder="">
-                        @if($errors->first('t_slug'))
-                            <span class="text-danger">{{ $errors->first('t_slug') }}</span>
+                        <input type="text" class="form-control slug"  value="{{ old('c_slug',$category->c_slug ?? '') }}" name="c_slug"  placeholder="">
+                        @if($errors->first('c_slug'))
+                            <span class="text-danger">{{ $errors->first('c_slug') }}</span>
                         @endif
+                    </div>
+                    <div class="form-group">
+                        <label class="required" for="exampleInputEmail1">Icon <span>(*)</span></label>
+                        <input type="text" class="form-control"  value="{{ old('c_icon',$category->c_icon ?? '') }}" name="c_icon"  placeholder="">
+                        <span class="d-block"><a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">Click xem mẫu</a></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="required" for="exampleInputEmail1">Sort <span>(*)</span></label>
+                        <input type="number" class="form-control"  value="{{ old('c_sort',$category->c_sort ?? '0') }}" name="c_sort"  placeholder="">
+                        <span class="d-block text-warning"><a >Thứ tự được sắp xếp từ bé đến lớn</a></span>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="required" for="exampleInputEmail1"> Parent <span>(*)</span></label>
+                        <select name="c_parent_id" class="form-control SlectBox SumoUnder"
+                                onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
+                            <!--placeholder-->
+                            <option title="ROOT" value="0">__ROOT__</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -35,12 +54,12 @@
                 <div class="card-body pt-3 box-seo hide" >
                     <div class="form-group">
                         <label class="required" for="exampleInputEmail1"> Title Seo <span>(*)</span></label>
-                        <input type="text" class="form-control title-seo" value="{{ old('t_title_seo',$tags->t_title_seo ?? '') }}" name="t_title_seo"  placeholder="">
+                        <input type="text" class="form-control title-seo" value="{{ old('c_title_seo',$category->c_title_seo ?? '') }}" name="c_title_seo"  placeholder="">
                     </div>
 
                     <div class="form-group">
                         <label class="required" for="exampleInputEmail1">Description SEO <span>(*)</span></label>
-                        <input type="text" class="form-control title-seo"  value="{{ old('t_description_seo',$tags->t_description_seo ?? '') }}" name="t_description_seo"  placeholder="">
+                        <input type="text" class="form-control title-seo"  value="{{ old('c_description_seo',$category->c_description_seo ?? '') }}" name="c_description_seo"  placeholder="">
                     </div>
                 </div>
             </div>
@@ -66,7 +85,7 @@
                 <div class="card-body pt-3">
                     <div class="form-group">
                         <label class="required" for="exampleInputEmail1"> Status <span>(*)</span></label>
-                        <select name="t_status" class="form-control SlectBox SumoUnder"
+                        <select name="c_status" class="form-control SlectBox SumoUnder"
                                 onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
                             <!--placeholder-->
                             <option title="Public" value="1">Public</option>
@@ -80,7 +99,7 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1"> Avatar </label>
                         <input type="file" class="filepond" name="avatar">
-                        <input type="hidden" name="t_avatar" id="avatar_uploads">
+                        <input type="hidden" name="c_avatar" id="avatar_uploads">
                     </div>
                 </div>
             </div>

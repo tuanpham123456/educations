@@ -5,13 +5,13 @@
             <div class="breadcrumb-header justify-content-between">
                 <div class="my-auto">
                     <div class="d-flex">
-                        <h4 class="content-title mb-0 my-auto">Tag</h4>
+                        <h4 class="content-title mb-0 my-auto">Category</h4>
                         <span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Empty</span>
                     </div>
                 </div>
                 <div class="d-flex my-xl-auto right-content">
                     <div class="pr-1 mb-3 mb-xl-0">
-                        <a href="{{ route('get_admin.tag.create') }}"class="btn btn-info  mr-2">Thêm mới <i class="la la-plus-circle"></i></a>
+                        <a href="{{ route('get_admin.category.create') }}"class="btn btn-info  mr-2">Thêm mới <i class="la la-plus-circle"></i></a>
                     </div>
                 </div>
             </div>
@@ -35,38 +35,38 @@
                                         <th>Action</th>
                                     </tr>
                                     </thead>
-                                    @forelse($tags as $item)
+                                    @forelse($categories as $item)
                                     <tbody>
                                     <tr>
                                         <th scope="row">{{$item->id}}</th>
-                                        <td>{{ $item->t_name }}</td>
+                                        <td>{{ $item->c_name }}</td>
                                         <td>
                                             <div class="existed-seo-meta">
-                                                <span class="page-title-seo title-seo">{{ $item->t_title_seo }}</span>
+                                                <span class="page-title-seo title-seo">{{ $item->c_title_seo }}</span>
                                                 <div class="page-url-seo ws nm">
-                                                    <p><span class="slug">http://tuanpham/{{ $item->t_slug }}.com</span></p>
+                                                    <p><span class="slug">http://tuanpham/{{ $item->c_slug }}.com</span></p>
                                                 </div>
                                                 <div class="ws-nm">
                                                     <span style="color:#70757a">{{ $item->created_at }} -</span>
-                                                    <span class="page-description-seo description_seo">{{ $item->t_description_seo }}</span>
+                                                    <span class="page-description-seo description_seo">{{ $item->c_description_seo }}</span>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
-                                            <span class="badge badge-info">{{ $item->t_sort }}</span>
+                                            <span class="badge badge-info">{{ $item->c_sort }}</span>
                                         </td>
                                         <td>
-                                            <span class="badge {{ $item->getStatus($item->t_status)['class'] }}">{{ $item->getStatus($item->t_status)['name'] }}</span>
+                                            <span class="badge {{ $item->getStatus($item->c_status)['class'] }}">{{ $item->getStatus($item->c_status)['name'] }}</span>
                                         </td>
                                         <td>{{ $item->created_at }}</td>
                                         <td>
-                                            <a href="{{ route('get_admin.tag.edit',$item->id) }}" class="btn btn-xs btn-info"><i class="la la-edit"></i></a>
-                                            <a href="{{ route('get_admin.tag.delete',$item->id) }}" class="btn btn-xs js-delete btn-danger "><i class="la la-trash"></i></a>
+                                            <a href="{{ route('get_admin.category.edit',$item->id) }}" class="btn btn-xs btn-info"><i class="la la-edit"></i></a>
+                                            <a href="{{ route('get_admin.category.delete',$item->id) }}" class="btn btn-xs js-delete btn-danger "><i class="la la-trash"></i></a>
                                         </td>
                                     </tr>
                                     @empty
                                         <p>Dữ liệu chưa được cập nhật</p>
-                                        @endforelse
+                                      @endforelse
                                     </tbody>
                                 </table>
                             </div>
