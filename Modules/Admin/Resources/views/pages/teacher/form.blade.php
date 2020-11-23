@@ -7,40 +7,38 @@
                     <div class="form-group">
                         <label class="required"for="exampleInputEmail1"> Name <span>(*)</span></label>
                         <input type="text" class="form-control keypress-count" data-title-seo=".title-seo" data-slug=".slug"
-                              value="{{ old('t_name',$tags->t_name ?? '') }}" id="inputName" name="t_name"  placeholder="">
+                              value="{{ old('t_name',$teacher->t_name ?? '') }}" id="inputName" name="t_name"  placeholder="">
                         @if($errors->first('t_name'))
                             <span class="text-danger">{{ $errors->first('t_name') }}</span>
                         @endif
                     </div>
                     <div class="form-group">
                         <label class="required" for="exampleInputEmail1">Slug <span>(*)</span></label>
-                        <input type="text" class="form-control slug"  value="{{ old('t_slug',$tags->t_slug ?? '') }}" name="t_slug"  placeholder="">
+                        <input type="text" class="form-control slug"  value="{{ old('t_slug',$teacher->t_slug ?? '') }}" name="t_slug"  placeholder="">
                         @if($errors->first('t_slug'))
                             <span class="text-danger">{{ $errors->first('t_slug') }}</span>
                         @endif
                     </div>
-                </div>
-            </div>
-            <div class="card  box-shadow-0">
-                <div class="card-header">
-                   <h4 class="card-title mb-1">SEO
-                       <a href="" class="js-action-seo" style="float: right"><i class="la la-edit"></i> Edit</a>
-                   </h4>
-                    <div class="view-seo">
-                        <a href="" class="view-seo-title ">aaaaaaaaaaaaaaaaaaaaaaaaa</a>
-                        <p class="view-seo-slug">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <span class="slug">121131</span></p>
-                        <p class="mb-2 view-seo-description">aaaaaaaaaaaaaaaaaa</p>
-                    </div>
-                </div>
-                <div class="card-body pt-3 box-seo hide" >
                     <div class="form-group">
-                        <label class="required" for="exampleInputEmail1"> Title Seo <span>(*)</span></label>
-                        <input type="text" class="form-control title-seo" value="{{ old('t_title_seo',$tags->t_title_seo ?? '') }}" name="t_title_seo"  placeholder="">
+                        <label class="required" for="exampleInputEmail1">Job <span>(*)</span></label>
+                        <input type="text" class="form-control"  value="{{ old('t_job',$teacher->t_job ?? '') }}" name="t_job"  placeholder="">
+                        @if($errors->first('t_job'))
+                            <span class="text-danger">{{ $errors->first('t_job') }}</span>
+                        @endif
                     </div>
-
                     <div class="form-group">
-                        <label class="required" for="exampleInputEmail1">Description SEO <span>(*)</span></label>
-                        <input type="text" class="form-control title-seo"  value="{{ old('t_description_seo',$tags->t_description_seo ?? '') }}" name="t_description_seo"  placeholder="">
+                        <label class="required" for="exampleInputEmail1">Phone <span>(*)</span></label>
+                        <input type="text" class="form-control"  value="{{ old('t_phone',$teacher->t_phone ?? '') }}" name="t_phone"  placeholder="">
+                        @if($errors->first('t_phone'))
+                            <span class="text-danger">{{ $errors->first('t_phone') }}</span>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <label class="required" for="exampleInputEmail1">Email <span>(*)</span></label>
+                        <input type="text" class="form-control"  value="{{ old('t_email',$teacher->t_email ?? '') }}" name="t_email"  placeholder="">
+                        @if($errors->first('t_email'))
+                            <span class="text-danger">{{ $errors->first('t_email') }}</span>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -62,19 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card  box-shadow-0">
-                <div class="card-body pt-3">
-                    <div class="form-group">
-                        <label class="required" for="exampleInputEmail1"> Status <span>(*)</span></label>
-                        <select name="t_status" class="form-control SlectBox SumoUnder"
-                                onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
-                            <!--placeholder-->
-                            <option title="Public" value="1">Public</option>
-                            <option title="Hide" value="0">Hide</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+
             <div class="card  box-shadow-0">
                 <div class="card-body pt-3">
                     <div class="form-group">

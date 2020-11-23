@@ -36,13 +36,16 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('delete/{id}','AdminCategoryController@delete')->name('get_admin.category.delete');
 
     });
-
-    Route::group(['prefix' => 'category'],function (){
-        Route::get('/','AdminCategoryController@index')->name('get_admin.category.index');
-    });
-
     Route::group(['prefix' => 'teacher'],function (){
         Route::get('/','AdminTeacherController@index')->name('get_admin.teacher.index');
+        Route::get('create','AdminTeacherController@create')->name('get_admin.teacher.create');
+        Route::post('create','AdminTeacherController@store');
+
+        Route::get('update/{id}','AdminTeacherController@edit')->name('get_admin.teacher.edit');
+        Route::post('update/{id}','AdminTeacherController@update');
+
+        Route::get('delete/{id}','AdminTeacherController@delete')->name('get_admin.teacher.delete');
+
     });
 
     Route::prefix('ajax')->namespace('Ajax')->group(function (){

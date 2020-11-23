@@ -5,7 +5,6 @@ namespace Modules\Admin\Http\Controllers;
 use App\Models\Education\Tag;
 use Carbon\Carbon;
 use Illuminate\Contracts\Support\Renderable;
-
 use Illuminate\Http\Request;
 use Modules\Admin\Http\Requests\AdminTagRequest;
 
@@ -31,9 +30,8 @@ class AdminTagController extends AdminController
     public function store(AdminTagRequest $request){
         $data                   = $request->except(['avatar','_token','save']);
         $data['created_at']     = Carbon::now();
-        if(!$request->t_title_seo) $data['t_title_seo'] = $request->t_name;
+        if(!$request->t_title_sxeo) $data['t_title_seo'] = $request->t_name;
         if(!$request->t_description_seo) $data['t_description_seo'] = $request->t_name;
-
         $tagId = Tag::insertGetId($data);
         if($tagId){
 //      thêm thành công show toast
@@ -63,6 +61,8 @@ class AdminTagController extends AdminController
         return redirect()->route('get_admin.tag.index');
 
     }
+
+
     public function delete(Request $request,$id){
         if($request->ajax()){
             $tags   = Tag::find($id);
