@@ -47,7 +47,17 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('delete/{id}','AdminTeacherController@delete')->name('get_admin.teacher.delete');
 
     });
+    Route::group(['prefix' => 'course'],function (){
+        Route::get('/','AdminCourseController@index')->name('get_admin.course.index');
+        Route::get('create','AdminCourseController@create')->name('get_admin.course.create');
+        Route::post('create','AdminCourseController@store');
 
+        Route::get('update/{id}','AdminCourseController@edit')->name('get_admin.course.edit');
+        Route::post('update/{id}','AdminCourseController@update');
+
+        Route::get('delete/{id}','AdminCourseController@delete')->name('get_admin.course.delete');
+
+    });
     Route::prefix('ajax')->namespace('Ajax')->group(function (){
         Route::post('/upload/image','AdminAjaxUploadImageController@processUpload')->name('post_ajax_admin.uploads');
     });

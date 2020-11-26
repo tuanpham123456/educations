@@ -6,20 +6,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 
-class Tag extends Model
+class Course extends Model
 {
     use HasFactory;
-    public $table = 'tags';
+    public $table = 'courses';
     protected $guarded = [''];
     const STATUS_DEFAULT = 1;
     const STATUS_HIDE    = 0;
-
-    const HOT = 1;
-
     protected $status =[
         self::STATUS_DEFAULT =>[
-          'name'    => 'Active',
-          'class'   => 'badge-success'
+            'name'    => 'Active',
+            'class'   => 'badge-success'
         ],
         self::STATUS_HIDE =>[
             'name'  => 'Hide',

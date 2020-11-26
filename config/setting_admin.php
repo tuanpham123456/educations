@@ -22,6 +22,12 @@ return[
                   'name'  => 'Danh mục',
                   'route' => 'get_admin.category.index'
               ],
+              [
+                  'name'  => 'Khóa học',
+                  'route' => 'get_admin.course.index'
+              ],
+
+
 
 
           ]
