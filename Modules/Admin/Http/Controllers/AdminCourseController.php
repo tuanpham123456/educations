@@ -62,6 +62,7 @@ class AdminCourseController extends AdminController
 
     public function update(AdminCourseRequest $request,$id){
         $course                 = Course::findOrFail($id);
+        $teachers               = Teacher::find($id);
         $data                   = $request->except(['avatar','_token','save']);
         $data['updated_at']     = Carbon::now();
 
@@ -73,6 +74,7 @@ class AdminCourseController extends AdminController
         if (!$request->c_price) $data['c_price'] = 0;
 
         $course->fill($data)->save();
+
         $this->showMessagesSuccess("Cập nhật thành công");
         return redirect()->route('get_admin.course.index');
     }

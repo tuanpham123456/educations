@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models\Education;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -26,5 +25,9 @@ class Course extends Model
 
     public function getStatus(){
         return Arr::get($this->status, $this->t_status , "[N\A]");
+    }
+
+    public function teacher(){
+        return $this->belongsTo(Teacher::class,'c_teacher_id');
     }
 }

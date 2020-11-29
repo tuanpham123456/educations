@@ -7,9 +7,11 @@
                         <li>
                             <a href=""><i class="fa fa-credit-card"><span>  Tất cả khóa học</span></i></a>
                         </li>
-                        <li>
-                            <a href=""><i class="fa fa-credit-card"><span>   Khóa học combo</span></i></a>
-                        </li>
+                       @foreach($categoriesParent as $item)
+                            <li>
+                                <a href="" title="{ $item->c_name }}"><i class="{{ $item->c_icon }}"><span>  {{ $item->c_name }}</span></i></a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

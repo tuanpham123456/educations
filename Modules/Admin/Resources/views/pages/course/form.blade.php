@@ -59,8 +59,11 @@
                                                     <select name="c_teacher_id" class="form-control SlectBox SumoUnder"
                                                             onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
                                                         <!--placeholder-->
-                                                        <option title="Public" value="1">Public</option>
-                                                        <option title="Hide" value="0">Hide</option>
+{{--                                                        <option title="Public" value="1">Public</option>--}}
+{{--                                                        <option title="Hide" value="0">Hide</option>--}}
+                                                        @foreach($teachers as $item)
+                                                            <option  value="{{ $item->id }}">{{{ $item->t_name }}}</option>
+                                                        @endforeach
                                                     </select>
 
                                                 </div>

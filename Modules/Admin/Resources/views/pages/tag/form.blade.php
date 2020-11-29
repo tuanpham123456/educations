@@ -81,13 +81,13 @@
                         <label class="required" for="exampleInputEmail1"> Hot <span>(*)</span>
                            <div class="form-group">
                                 <label class="box-checkbox"> Nổi bật
-                                    <input type="checkbox" name="t_hot" value="1">
+                                    <input type="radio" name="t_hot" {{ ($tags->t_hot ?? 0) == 1 ? 'checked ="checked"' : '' }} value="1">
                                     <span class="checkmark"></span>
                                 </label>
                            </div>
                             <div class="form-group">
                                 <label class="box-checkbox"> Mặc định
-                                    <input type="checkbox" name="t_hot" value="0">
+                                    <input type="radio" {{ ($tags->t_hot ?? 0) == 0 ? 'checked ="checked"' : '' }} name="t_hot" value="0">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>

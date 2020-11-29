@@ -30,6 +30,7 @@
                                         <th>Name</th>
                                         <th>SEO</th>
                                         <th>Sort</th>
+                                        <th>Hot</th>
                                         <th>Status</th>
                                         <th>Time</th>
                                         <th>Action</th>
@@ -54,6 +55,9 @@
                                         </td>
                                         <td>
                                             <span class="badge badge-info">{{ $item->t_sort }}</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge {{ $item->getHot($item->t_hot)['class'] }}">{{ $item->getHot($item->t_hot)['name'] }}</span>
                                         </td>
                                         <td>
                                             <span class="badge {{ $item->getStatus($item->t_status)['class'] }}">{{ $item->getStatus($item->t_status)['name'] }}</span>

@@ -14,8 +14,8 @@ class Tag extends Model
     const STATUS_DEFAULT = 1;
     const STATUS_HIDE    = 0;
 
-    const HOT = 1;
-
+    const HOT    = 1;
+    const UN_HOT = 0;
     protected $status =[
         self::STATUS_DEFAULT =>[
           'name'    => 'Active',
@@ -23,11 +23,23 @@ class Tag extends Model
         ],
         self::STATUS_HIDE =>[
             'name'  => 'Hide',
-            'class' => 'badge-default'
+            'class' => 'badge-dark'
         ]
     ];
-
+    protected $hot =[
+        self::HOT =>[
+            'name'    => 'Hot',
+            'class'   => 'badge-success'
+        ],
+        self::UN_HOT =>[
+            'name'  => 'Default',
+            'class' => 'badge-dark'
+        ]
+    ];
     public function getStatus(){
         return Arr::get($this->status, $this->t_status , "[N\A]");
+    }
+    public function getHot(){
+        return Arr::get($this->hot, $this->t_hot , "[N\A]");
     }
 }
