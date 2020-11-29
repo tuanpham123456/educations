@@ -5,11 +5,15 @@
                 <div class="categories">
                     <ul>
                         <li>
-                            <a href=""><i class="fa fa-credit-card"><span>  Tất cả khóa học</span></i></a>
+                            <a href="{{ route('get.category.all') }}" title="Tất cả khóa học">
+                                <i class="fa fa-credit-card">
+                                    <span>  Tất cả khóa học</span>
+                                </i>
+                            </a>
                         </li>
                        @foreach($categoriesParent as $item)
                             <li>
-                                <a href="" title="{ $item->c_name }}"><i class="{{ $item->c_icon }}"><span>  {{ $item->c_name }}</span></i></a>
+                                <a href="{{ route('get.category',['slug' => $item->c_slug]) }}" title="{{ $item->c_name }}"><i class="{{ $item->c_icon }}"><span>  {{ $item->c_name }}</span></i></a>
                             </li>
                         @endforeach
                     </ul>

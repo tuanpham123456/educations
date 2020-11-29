@@ -10,11 +10,15 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-//FRONTEND
+
 mix.sass('resources/assets/scss/pages/home/home.scss', 'public/css');
+mix.sass('resources/assets/scss/pages/category/category.scss', 'public/css');
+
 mix.sass('resources/assets/valex/scss/pages/admin_dashboard.scss', 'public/css_admin');
 
 mix.js('resources/assets/js/pages/home/home.js', 'public/js');
+mix.js('resources/assets/js/pages/category/category.js', 'public/js');
+
 mix.js('resources/assets/valex/js/pages/admin_dashboard.js', 'public/js_admin');
 
 
