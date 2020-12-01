@@ -3,9 +3,9 @@
         <div class="section_title heading-before">
             <h2 class="heading-h2 heading-before">Khóa học <span style="color: #ff7818">0 đồng</span></h2>
         </div>
-        <div class="lists js-lists-course-home owl-carousel owl-theme ">
+        <div class="lists  js-lists-course-home owl-carousel owl-theme ">
             @foreach($courses as $item)
-                <div class="item  mr20 box-course mb20">
+                <div class="item list-course  mr20 box-course mb20">
                     <div class="avatar">
                         <div class="img">
                             <a href="">

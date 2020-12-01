@@ -1681,6 +1681,11 @@ a {
   text-decoration: none;
 }
 
+b,
+strong {
+  font-weight: 700;
+}
+
 .flex {
   display: flex;
 }
@@ -1717,6 +1722,10 @@ a {
   flex: 0 0 20%;
 }
 
+.box .box-25 {
+  flex: 0 0 25%;
+}
+
 .box .box-30 {
   flex: 0 0 30%;
 }
@@ -1751,6 +1760,10 @@ a {
 
 .box .box-70 {
   flex: 0 0 70%;
+}
+
+.box .box-75 {
+  flex: 0 0 75%;
 }
 
 .box .box-80 {
@@ -1853,6 +1866,11 @@ a {
 
 .lists .item-3 {
   width: calc(100%/3 - 10px);
+  float: left;
+}
+
+.lists .item-3-0 {
+  width: calc(100%/3);
   float: left;
 }
 
@@ -2033,6 +2051,35 @@ a {
 .header-button .box-right a:hover {
   cursor: pointer;
   color: #50ad4e;
+}
+
+.breadcrumb {
+  background-color: #fafafa;
+}
+
+.breadcrumb ul {
+  border-radius: 0;
+  padding: 8px 0;
+  margin: 0;
+  background-color: inherit;
+}
+
+.breadcrumb ul li {
+  color: #666 !important;
+  font-weight: bold;
+  float: left;
+  position: relative;
+}
+
+.breadcrumb ul li a {
+  color: inherit;
+}
+
+.breadcrumb ul > li + li::before {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #a0a0a0;
+  content: "\BB";
 }
 
 /**
@@ -2305,7 +2352,7 @@ a {
   justify-self: center;
 }
 
-.box-course.item .avatar {
+.list-course.item .avatar {
   border-radius: 5px 5px 0 0;
   border: none;
   position: relative;
@@ -2313,7 +2360,7 @@ a {
   height: 127px;
 }
 
-.box-course.item .avatar a img {
+.list-course.item .avatar a img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2324,7 +2371,7 @@ a {
   -o-object-fit: cover;
 }
 
-.box-course.item .img_badget {
+.list-course.item .img_badget {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2334,7 +2381,7 @@ a {
   padding: 4px 0;
 }
 
-.box-course.item .img_badget span {
+.list-course.item .img_badget span {
   background: #50ad4e;
   border-radius: 100px;
   padding: 1px 5px;
@@ -2343,7 +2390,7 @@ a {
   color: white;
 }
 
-.box-course.item .info {
+.list-course.item .info {
   color: #000;
   background: #fff;
   border: none;
@@ -2354,7 +2401,7 @@ a {
   transition: background-color 0.25s linear;
 }
 
-.box-course.item .info .title a {
+.list-course.item .info .title a {
   font-size: 1rem;
   font-size: 21px;
   margin-bottom: 10px;
@@ -2369,7 +2416,7 @@ a {
   color: #000000;
 }
 
-.box-course.item .info-auth {
+.list-course.item .info-auth {
   display: -webkit-box;
   max-width: 100%;
   -webkit-line-clamp: 2;
@@ -2378,17 +2425,17 @@ a {
   text-overflow: ellipsis;
 }
 
-.box-course.item .info-auth .icon {
+.list-course.item .info-auth .icon {
   color: #50ad4e;
   margin-right: 5px;
   width: 15px;
 }
 
-.box-course.item .info-auth .name {
+.list-course.item .info-auth .name {
   font-size: 12px;
 }
 
-.box-course.item .info .video {
+.list-course.item .info .video {
   color: #fb6a00 !important;
   font-weight: 400;
   font-size: 14px;
@@ -2397,27 +2444,27 @@ a {
   align-items: center;
 }
 
-.box-course.item .info .video i {
+.list-course.item .info .video i {
   margin-right: 5px;
 }
 
-.box-course.item .info .price {
+.list-course.item .info .price {
   font-size: 14px;
   color: #f56a00;
   margin-bottom: 0;
   font-weight: 700;
 }
 
-.box-course.item:hover {
+.list-course.item:hover {
   cursor: pointer;
 }
 
-.box-course.item:hover .avatar img {
+.list-course.item:hover .avatar img {
   transform: translate(-50%, -50%) scale(1.1);
   filter: brightness(0.7);
 }
 
-.box-course.item:hover .info {
+.list-course.item:hover .info {
   background-color: rgba(80, 173, 78, 0.1);
 }
 
@@ -2493,5 +2540,173 @@ footer .footer_botton {
   background: white;
   text-align: center;
   padding: 25px 0;
+}
+
+.fill-search {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.fill-search .btn-listing-filter {
+  color: #fff;
+  background-color: #50ad4e;
+  padding: 7px 10px;
+  border-radius: 99px;
+  font-weight: 700;
+  pointer-events: none;
+  display: inline;
+}
+
+.fill-search .checkbox {
+  color: #272727;
+}
+
+.fill-search .checkbox span {
+  position: relative;
+  padding-left: 25px;
+}
+
+.fill-search .checkbox span:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #a8a8a8;
+  border-radius: 4px;
+  left: 0;
+  bottom: 0;
+}
+
+.fill-search .checkbox:active span:after {
+  transform: rotate(45deg) scale(1);
+  position: absolute;
+  border: 2px solid #e91e63;
+  border-top: 0;
+  border-left: 0;
+  content: " ";
+  width: 5px;
+  left: 5px;
+  top: 3px;
+  height: 8px;
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+
+.fill-search .checkbox:active span:before {
+  border: 1px solid #e91e63;
+}
+
+.fill-search select {
+  border: 2px solid #a0a0a0;
+  padding: 4px 25px 3px 8px;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
+.fill-search .field-sort {
+  display: inline-block;
+  float: right;
+}
+
+.fill-search .field-sort select {
+  margin: 0;
+}
+
+.box-sidebar {
+  background: #f9f9f9;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.box-sidebar-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.box-sidebar ul.b-s-category {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.box-sidebar ul.b-s-category li {
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+
+.box-sidebar ul.b-s-category li:first-child {
+  padding-top: 15px;
+}
+
+.box-sidebar ul.b-s-category li a {
+  color: #272727;
+  background-repeat: no-repeat;
+  height: 30px;
+  line-height: 30px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.box-sidebar ul.b-s-category li a i {
+  color: #50ad4e;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.box-sidebar ul.b-s-category li a:hover {
+  color: #50ad4e;
+}
+
+.box-sidebar ul.b-s-category li:last-child {
+  padding-bottom: 15px;
+}
+
+.box-sidebar ul.b-s-category .turn-back {
+  margin-bottom: 0;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.box-sidebar ul.b-s-category .turn-back i {
+  color: #272727;
+  font-size: 20px;
+}
+
+.box-sidebar .b-s-tags {
+  padding: 15px;
+  display: inline-block;
+  width: 100%;
+}
+
+.box-sidebar .b-s-tags li {
+  float: left;
+  padding-top: 0 !important;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.box-sidebar .b-s-tags li a {
+  padding: 5px 10px;
+  color: #fff !important;
+  background: #a9b2bd;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  font-weight: 300;
+  display: block;
+}
+
+.box-sidebar .b-s-tags li a:hover {
+  background-color: #389a36;
+}
+
+.main-content .box-content {
+  background-color: white;
+  padding: 15px;
 }
 
