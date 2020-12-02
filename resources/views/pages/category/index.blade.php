@@ -58,9 +58,11 @@
                        <b>20 </b>Khóa học <b>Con người</b>
                    </div>
                    <div class="lists">
-                       @for($i = 1; $i <= 9; $i++)
-                           @include('pages.category.include._inc_item_course')
-                       @endfor
+                       @forelse($courses as $item)
+                           @include('pages.category.include._inc_item_course',['courses' => $item])
+                       @empty
+                           <p>Dữ liệu chưa được cập nhật</p>
+                       @endforelse
                        <div class="clear"></div>
                    </div>
                </div>
