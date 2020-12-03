@@ -11,6 +11,7 @@ use Modules\Admin\Http\Requests\AdminCategoryRequest;
 
 class AdminCategoryController extends AdminController
 {
+
     public function index(){
         $categories   = Category::orderByDesc('c_sort')->paginate(10);
         $viewData   = [

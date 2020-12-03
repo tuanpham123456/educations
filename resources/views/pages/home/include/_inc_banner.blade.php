@@ -13,7 +13,7 @@
                         </li>
                        @foreach($categoriesParent as $item)
                             <li>
-                                <a href="{{ route('get.category',['slug' => $item->c_slug]) }}" title="{{ $item->c_name }}"><i class="{{ $item->c_icon }}"><span>  {{ $item->c_name }}</span></i></a>
+                                <a href="{{ route('get.course.render',['slug' => $item->c_slug.'-c']) }}" title="{{ $item->c_name }}"><i class="{{ $item->c_icon }}"><span>  {{ $item->c_name }}</span></i></a>
                             </li>
                         @endforeach
                     </ul>

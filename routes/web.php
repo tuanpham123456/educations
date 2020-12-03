@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\CategoryController;
-
+use App\Http\Controllers\Frontend\HubCourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +16,6 @@ use App\Http\Controllers\Frontend\CategoryController;
 |
 */
 Route::get('',[HomeController::class,'index']);
-
-Route::get('/danh-muc/{slug?}',[CategoryController::class,'index'])->name('get.category');
+// render danh mục sang HubCourseController
+Route::get('/khoa-hoc/{slug?}',[HubCourseController::class,'render'])->name('get.course.render');
 Route::get('/tat-ca-khoa-hoc',[CategoryController::class,'index'])->name('get.category.all');

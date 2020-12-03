@@ -7,6 +7,7 @@ namespace App\Service\Seo;
 use App\Models\Education\SeoEducation;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 
 class RenderUrlSeoCourseService
 {
@@ -36,7 +37,7 @@ class RenderUrlSeoCourseService
 
                     break;
             }
-            $slug  = $slug . '-' . $prefix;
+            $slug  = Str::slug($slug . $prefix);
             $slugMd5  = md5($slug);
             $check = $that->checkUrl($slugMd5);
             if($check){
