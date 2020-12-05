@@ -23,12 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87263d7a-f976-42ff-bb3e-ac35780a9209" name="Default Changelist" comment="mix backend admin">
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/course/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminCategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/course/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/course/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/HubCourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/HubCourseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Service/Seo/RenderUrlSeoCourseService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Service/Seo/RenderUrlSeoCourseService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_banner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_banner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_section_two.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_section_two.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +302,8 @@
       <workItem from="1606916311504" duration="4462000" />
       <workItem from="1606931227485" duration="630000" />
       <workItem from="1606982799182" duration="3644000" />
-      <workItem from="1606990407229" duration="2447000" />
+      <workItem from="1606990407229" duration="3424000" />
+      <workItem from="1607084596992" duration="5224000" />
     </task>
     <task id="LOCAL-00001" summary="Css item course">
       <created>1603634294026</created>
@@ -458,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606920672895</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix RenderUrlSeoCourseService&#10;create HubCourseController render url course not all&#10;edit route">
+      <created>1606996786730</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1606996786730</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +508,8 @@
     <MESSAGE value="category frontend" />
     <MESSAGE value="show category frontend" />
     <MESSAGE value="* render slug (category,course,tag) theo id&#10;Create Serviec/Seo/RenderUrlSeoCourseService" />
-    <option name="LAST_COMMIT_MESSAGE" value="* render slug (category,course,tag) theo id&#10;Create Serviec/Seo/RenderUrlSeoCourseService" />
+    <MESSAGE value="fix RenderUrlSeoCourseService&#10;create HubCourseController render url course not all&#10;edit route" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix RenderUrlSeoCourseService&#10;create HubCourseController render url course not all&#10;edit route" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="292" key="#Composer" timestamp="1603628582271">
@@ -552,11 +561,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="555" y="140" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1606917029513" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1606920677789">
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1606996794845">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603976651077" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1606920677789" />
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1606996794845" />
     <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606676966835">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -575,11 +584,11 @@
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603955216936" />
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1606918625341" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1606984577763">
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1607088728767">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603975488859" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1606984577763" />
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607088728767" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

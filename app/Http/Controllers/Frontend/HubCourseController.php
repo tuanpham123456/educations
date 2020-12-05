@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 
 class HubCourseController extends Controller
 {
-    //render url course not all
+        //render url course not all
     public function render(Request $request,$slug){
         $slugMd5    = md5(Str::slug($slug));
         $urlSeo     = SeoEducation::where([
@@ -20,6 +20,8 @@ class HubCourseController extends Controller
             switch ($type){
                 case SeoEducation::TYPE_CATEGORY:
                     return (new CategoryController())->getCourseByCategory($urlSeo->se_id,$request);
+                case SeoEducation::TYPE_COURSE:
+                    return (new CourseController())->getCourseDetail($urlSeo->se_id,$request);
             }
         }
         return redirect()->route('get.category.all');

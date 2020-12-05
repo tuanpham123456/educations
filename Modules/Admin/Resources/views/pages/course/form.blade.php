@@ -59,11 +59,11 @@
                                                     <select name="c_teacher_id" class="form-control SlectBox SumoUnder"
                                                             onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
                                                         <!--placeholder-->
-{{--                                                        <option title="Public" value="1">Public</option>--}}
-{{--                                                        <option title="Hide" value="0">Hide</option>--}}
-                                                        @foreach($teachers as $item)
-                                                            <option  value="{{ $item->id }}">{{{ $item->t_name }}}</option>
-                                                        @endforeach
+                                                        <option title="Public" value="4">Tuan Pham TP</option>
+                                                        <option title="Hide" value="5">MyMy Diệu</option>
+{{--                                                        @foreach($teachers as $item)--}}
+{{--                                                            <option  value="{{ $item->id }}">{{{ $item->t_name }}}</option>--}}
+{{--                                                        @endforeach--}}
                                                     </select>
 
                                                 </div>
@@ -74,8 +74,8 @@
                                                     <select name="c_category_id" class="form-control SlectBox SumoUnder"
                                                             onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
                                                         <!--placeholder-->
-                                                        <option title="Public" value="1">Public</option>
-                                                        <option title="Hide" value="0">Hide</option>
+                                                        <option title="Public" value="2">Public</option>
+                                                        <option title="Hide" value="4">Hide</option>
                                                     </select>
 
                                                 </div>

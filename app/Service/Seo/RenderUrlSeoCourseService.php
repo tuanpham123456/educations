@@ -28,11 +28,11 @@ class RenderUrlSeoCourseService
                 case self::TYPE_CATEGORY;
                     $prefix = self::PREFIX_CATEGORY;
                     break;
-                case self::PREFIX_TAG;
+                case self::TYPE_TAG;
                     $prefix = self::PREFIX_TAG;
 
                     break;
-                case self::PREFIX_COURSE;
+                case self::TYPE_COURSE;
                     $prefix = self::PREFIX_COURSE;
 
                     break;
