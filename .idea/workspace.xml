@@ -23,12 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87263d7a-f976-42ff-bb3e-ac35780a9209" name="Default Changelist" comment="mix backend admin">
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/course/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/tp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/assets/js/pages/course/course.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/assets/scss/pages/course/course.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/assets/scss/pages/course/include/_inc_header_course.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/assets/scss/pages/course/include/_inc_page.course.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/assets/scss/pages/course/include/_inc_vote.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/course/include/_inc_breadcrumb.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/course/include/_inc_header_course.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/course/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/course/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/HubCourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/HubCourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Service/Seo/RenderUrlSeoCourseService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Service/Seo/RenderUrlSeoCourseService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_section_two.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_section_two.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js_admin/admin_dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js_admin/admin_dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/course/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/course/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,25 +198,25 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="VAR" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/course" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pages/course/include" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\educations\public\images" />
       <recent name="C:\xampp\htdocs\educations\resources\assets\scss\components" />
       <recent name="C:\xampp\htdocs\educations\resources\assets\valex\js" />
       <recent name="C:\xampp\htdocs\educations\resources\assets\valex\assets\js" />
       <recent name="C:\xampp\htdocs\educations\resources\assets\valex\js\components" />
-      <recent name="C:\xampp\htdocs\educations\resources\assets\valex\scss\components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\educations\resources\views\pages\course\include" />
       <recent name="C:\xampp\htdocs\educations\Modules\Admin\Resources\views\pages\course" />
       <recent name="C:\xampp\htdocs\educations\Modules\Admin\Resources\views\pages\teacher" />
       <recent name="C:\xampp\htdocs\educations\Modules\Admin\Resources\views\pages\category" />
       <recent name="C:\xampp\htdocs\educations\public\fonts" />
-      <recent name="C:\xampp\htdocs\educations\public" />
     </key>
   </component>
   <component name="RunManager">
@@ -304,6 +313,15 @@
       <workItem from="1606982799182" duration="3644000" />
       <workItem from="1606990407229" duration="3424000" />
       <workItem from="1607084596992" duration="5224000" />
+      <workItem from="1607134158713" duration="3380000" />
+      <workItem from="1607176855810" duration="1191000" />
+      <workItem from="1607255738782" duration="3661000" />
+      <workItem from="1607267720422" duration="635000" />
+      <workItem from="1607344375426" duration="5670000" />
+      <workItem from="1607390902017" duration="1262000" />
+      <workItem from="1607409584175" duration="5556000" />
+      <workItem from="1607431614129" duration="1225000" />
+      <workItem from="1607432992257" duration="4676000" />
     </task>
     <task id="LOCAL-00001" summary="Css item course">
       <created>1603634294026</created>
@@ -466,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606996786730</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="show courefree 0đ">
+      <created>1607135134565</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1607135134565</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +534,8 @@
     <MESSAGE value="show category frontend" />
     <MESSAGE value="* render slug (category,course,tag) theo id&#10;Create Serviec/Seo/RenderUrlSeoCourseService" />
     <MESSAGE value="fix RenderUrlSeoCourseService&#10;create HubCourseController render url course not all&#10;edit route" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix RenderUrlSeoCourseService&#10;create HubCourseController render url course not all&#10;edit route" />
+    <MESSAGE value="show courefree 0đ" />
+    <option name="LAST_COMMIT_MESSAGE" value="show courefree 0đ" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="292" key="#Composer" timestamp="1603628582271">
@@ -561,11 +587,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="555" y="140" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1606917029513" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1606996794845">
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1607135139371">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603976651077" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1606996794845" />
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1607135139371" />
     <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606676966835">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -584,11 +610,11 @@
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603955216936" />
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1606918625341" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1607088728767">
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1607437118059">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603975488859" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607088728767" />
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607437118059" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

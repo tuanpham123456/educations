@@ -15,8 +15,14 @@ class CourseController extends Controller
         ])->first();
 
         if(!$course) return abort(404);
+        $courses    = Course::with('teacher:id,t_name,t_avatar,t_slug,t_job')
+            ->where('c_status',Course::STATUS_DEFAULT)
+            ->orderByDesc('id')
+            ->paginate(12);
+
         $viewData   = [
-            'course'    => $course
+            'courses'   => $courses,
+            'course'    => $course,
         ];
         return view('pages.course.index',$viewData ?? []);
     }
