@@ -23,21 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87263d7a-f976-42ff-bb3e-ac35780a9209" name="Default Changelist" comment="mix backend admin">
-      <change afterPath="$PROJECT_DIR$/public/images/tp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/js/pages/course/course.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/scss/pages/course/course.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/scss/pages/course/include/_inc_header_course.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/scss/pages/course/include/_inc_page.course.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/scss/pages/course/include/_inc_vote.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/course/include/_inc_breadcrumb.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/course/include/_inc_header_course.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminCourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminCourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/course/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/course/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js_admin/admin_dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js_admin/admin_dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/course/include/_inc_header_course.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/course/include/_inc_header_course.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/course/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/course/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,7 +313,8 @@
       <workItem from="1607390902017" duration="1262000" />
       <workItem from="1607409584175" duration="5556000" />
       <workItem from="1607431614129" duration="1225000" />
-      <workItem from="1607432992257" duration="4676000" />
+      <workItem from="1607432992257" duration="4820000" />
+      <workItem from="1607525412138" duration="3186000" />
     </task>
     <task id="LOCAL-00001" summary="Css item course">
       <created>1603634294026</created>
@@ -491,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607135134565</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="show view course">
+      <created>1607437793656</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1607437793656</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +510,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Css item course" />
     <MESSAGE value="Css section two" />
     <MESSAGE value="css từ khóa nổi bật" />
     <MESSAGE value="lecture" />
@@ -535,7 +534,8 @@
     <MESSAGE value="* render slug (category,course,tag) theo id&#10;Create Serviec/Seo/RenderUrlSeoCourseService" />
     <MESSAGE value="fix RenderUrlSeoCourseService&#10;create HubCourseController render url course not all&#10;edit route" />
     <MESSAGE value="show courefree 0đ" />
-    <option name="LAST_COMMIT_MESSAGE" value="show courefree 0đ" />
+    <MESSAGE value="show view course" />
+    <option name="LAST_COMMIT_MESSAGE" value="show view course" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="292" key="#Composer" timestamp="1603628582271">
@@ -587,11 +587,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="555" y="140" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1606917029513" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1607135139371">
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1607437797638">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603976651077" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1607135139371" />
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1607437797638" />
     <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606676966835">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

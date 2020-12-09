@@ -1,16 +1,16 @@
 <div class="header-course">
     <div class="container">
         <div class="info">
-            <h1 class="mb15"><strong>Mô hình nến và các động thái trong chứng khoán</strong></h1>
+            <h1 class="mb15"><strong>{{ $courseDetail->c_name }}</strong></h1>
             <p class="desc">
                 <span>
-                    <i class="fa fa-user"></i> 20 học viên
+                    <i class="fa fa-user"></i> {{ $courseDetail->c_total_pay }} học viên
                 </span>
                 <span>
-                    <i class="fa fa-play-circle"></i> 50 Bài học
+                    <i class="fa fa-play-circle"></i> {{ $courseDetail->c_total_time }} Bài học
                 </span>
                 <span>
-                    <i class="fa fa-clock-o"></i> 5 giờ
+                    <i class="fa fa-clock-o"></i> {{ $courseDetail->c_total_time }} giờ
                 </span>
                 <span class="vote">
                     @for($i = 1 ; $i <=5 ; $i++)

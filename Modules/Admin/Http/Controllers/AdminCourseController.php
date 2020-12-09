@@ -56,8 +56,13 @@ class AdminCourseController extends AdminController
 
     public function edit($id){
         $course     = Course::findOrFail($id);
+        $categories     = Category::orderByDesc('c_sort')->get();
+        $teachers       = Teacher::orderByDesc('id')->get();
+
         $viewData   = [
-            'course'    => $course
+            'course'        => $course,
+            'categories'    => $categories,
+            'teachers'      => $teachers
         ];
         return view ('admin::pages.course.update',$viewData);
     }
@@ -67,6 +72,7 @@ class AdminCourseController extends AdminController
         $teachers               = Teacher::find($id);
         $data                   = $request->except(['avatar','_token','save']);
         $data['updated_at']     = Carbon::now();
+
 
         if(!$request->c_title_seo) $data['c_title_seo'] = $request->c_name;
         if(!$request->c_description_seo) $data['c_description_seo'] = $request->c_name;

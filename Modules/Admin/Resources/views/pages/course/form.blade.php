@@ -59,11 +59,9 @@
                                                     <select name="c_teacher_id" class="form-control SlectBox SumoUnder"
                                                             onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
                                                         <!--placeholder-->
-                                                        <option title="Public" value="4">Tuan Pham TP</option>
-                                                        <option title="Hide" value="5">MyMy Diệu</option>
-{{--                                                        @foreach($teachers as $item)--}}
-{{--                                                            <option  value="{{ $item->id }}">{{{ $item->t_name }}}</option>--}}
-{{--                                                        @endforeach--}}
+                                                        @foreach($teachers as $item)
+                                                            <option title="{{ $item->t_name }}" value="{{ $item->id }}">{{{ $item->t_name }}}</option>
+                                                        @endforeach
                                                     </select>
 
                                                 </div>
@@ -73,9 +71,9 @@
                                                     <label class="required" for="exampleInputEmail1">Category<span>(*)</span></label>
                                                     <select name="c_category_id" class="form-control SlectBox SumoUnder"
                                                             onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
-                                                        <!--placeholder-->
-                                                        <option title="Public" value="2">Public</option>
-                                                        <option title="Hide" value="4">Hide</option>
+                                                        @foreach($categories as $item)
+                                                            <option value="{{ $item->id }}"  title="{{ $item->c_name }}">{{{ $item->c_name }}}</option>
+                                                        @endforeach
                                                     </select>
 
                                                 </div>

@@ -34,7 +34,7 @@ class HomeController extends Controller
         $viewData   = [
             'tagsHot'           => $tagsHot,
             'coursesFree'       => $coursesFree,
-            'categoriesParent' => $categoriesParent,
+            'categoriesParent'  => $categoriesParent,
         ];
         return view ('pages.home.index',$viewData);
     }

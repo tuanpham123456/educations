@@ -4,7 +4,7 @@
 @stop
 @section('content')
     @include('pages.course.include._inc_breadcrumb')
-    @include('pages.course.include._inc_header_course')
+    @include('pages.course.include._inc_header_course',['courseDetail' => $courseDetail])
     <div class="container">
         <div class="box" style="position:relative;">
             <div class="box-70 mr10">
@@ -117,7 +117,7 @@
                 <div class="right-section" style="padding: 0">
                     <img class="thumb" src="{{ asset('images/section_1.jpg') }}" alt="">
                     <div class="right-section-box">
-                        <p class="price"><i class="fa fa-tags"></i><span>390.000 đ</span></p>
+                        <p class="price"><i class="fa fa-tags"></i><span>{{ number_format($courseDetail->c_price,0,',','.') }}đ</span></p>
                         <a href="" class="btn btn-success btn-radius"> Mua ngay</a>
                         <a href="" class="btn btn-pink btn-radius"> Thêm giỏ hàng</a>
                         <div class="footer">
@@ -128,7 +128,7 @@
                     </div>
                 </div>
                 <div class="right-section">
-                    <h4 class="right-section-title"> Mô hình liên kết các động thái chứng khoán</h4>
+                    <h4 class="right-section-title"> {{ $courseDetail->c_name }}</h4>
                     <div class="list-course">
                         <a href=""><i class="fa fa-play-circle"></i> Bài mở đầu</a>
                         <a href=""><i class="fa fa-play-circle"></i> Bài 1: Nếu tăng giá</a>
