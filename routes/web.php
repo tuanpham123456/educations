@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\CategoryController;
 use App\Http\Controllers\Frontend\HubCourseController;
+use App\Http\Controllers\Frontend\TeacherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('',[HomeController::class,'index']);
 // render danh mục sang HubCourseController
 Route::get('/khoa-hoc/{slug?}',[HubCourseController::class,'render'])->name('get.course.render');
 Route::get('/tat-ca-khoa-hoc',[CategoryController::class,'index'])->name('get.category.all');
+
+Route::get('/giang-vien/{slug}',[TeacherController::class,'getCourseByTeacherSlug'])->name('get.teacher.course');

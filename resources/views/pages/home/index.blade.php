@@ -8,7 +8,7 @@
     {{--khóa học 0đ--}}
     @include('pages.home.include._inc_section_two',['courses' => $coursesFree])
     @include('pages.home.include._inc_tags_hot',[ 'tags' => $tagsHot])
-    @include('pages.home.include._inc_lecture')
+    @include('pages.home.include._inc_lecture',['teachers' => $teachers])
 @stop
 @section('js')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">

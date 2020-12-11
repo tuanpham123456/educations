@@ -23,21 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87263d7a-f976-42ff-bb3e-ac35780a9209" name="Default Changelist" comment="mix backend admin">
-      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/slide/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/slide/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/slide/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/slide/update.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helper/autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helper/file.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/teacher/course.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/components/_inc_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/components/_inc_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/category/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/category/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/setting_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/setting_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_banner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_banner.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scss/pages/home/include/_inc_lecture.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scss/pages/home/include/_inc_lecture.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_lecture.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_lecture.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +318,8 @@
       <workItem from="1607525412138" duration="4701000" />
       <workItem from="1607611751017" duration="1840000" />
       <workItem from="1607613665478" duration="3657000" />
-      <workItem from="1607668874078" duration="2533000" />
+      <workItem from="1607668874078" duration="3670000" />
+      <workItem from="1607681295299" duration="1352000" />
     </task>
     <task id="LOCAL-00001" summary="Css item course">
       <created>1603634294026</created>
@@ -509,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607528728174</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="system data (slide) backend&#10;show _inc_banner &#10;Helper create function&#10;autoload">
+      <created>1607671988469</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1607671988469</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,7 +529,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="css từ khóa nổi bật" />
     <MESSAGE value="lecture" />
     <MESSAGE value="mix backend admin" />
     <MESSAGE value="mix" />
@@ -553,7 +553,8 @@
     <MESSAGE value="show courefree 0đ" />
     <MESSAGE value="show view course" />
     <MESSAGE value="show data course0đ" />
-    <option name="LAST_COMMIT_MESSAGE" value="show data course0đ" />
+    <MESSAGE value="system data (slide) backend&#10;show _inc_banner &#10;Helper create function&#10;autoload" />
+    <option name="LAST_COMMIT_MESSAGE" value="system data (slide) backend&#10;show _inc_banner &#10;Helper create function&#10;autoload" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="292" key="#Composer" timestamp="1603628582271">
@@ -613,11 +614,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="604" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1607671163795" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1607528731318">
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1607671993369">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603976651077" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1607528731318" />
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1607671993369" />
     <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606676966835">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -636,11 +637,11 @@
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603955216936" />
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1606918625341" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1607670615342">
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1607682095217">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603975488859" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607670615342" />
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607682095217" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

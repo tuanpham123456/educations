@@ -36,12 +36,14 @@ class HomeController extends Controller
         $slides  = Slide::where('s_status',Slide::STATUS_DEFAULT)
             ->orderByDesc('s_sort')
             ->get();
-
+        // show đội ngũ giảng viên
+        $teachers   = Teacher::orderByDesc('id')->get();
         $viewData   = [
             'tagsHot'           => $tagsHot,
             'coursesFree'       => $coursesFree,
             'categoriesParent'  => $categoriesParent,
-            'slides'            => $slides
+            'slides'            => $slides,
+            'teachers'          => $teachers,
         ];
         return view ('pages.home.index',$viewData);
     }

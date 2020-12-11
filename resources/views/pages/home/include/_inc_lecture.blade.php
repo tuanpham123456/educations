@@ -4,29 +4,35 @@
             <h2 class="heading-h2 heading-before">Đội ngũ giảng viên</h2>
         </div>
         <div class="lists js-lists-lecture owl-carousel owl-theme ">
-            @for($i = 1; $i <= 8; $i++)
+            @foreach($teachers as $item)
                 <div class="item">
                     <div class="item-header">
-                        <a href="">
-                            <img src="{{ asset('images/avatar.jpg') }}" alt="">
+                        <a href="" title="{{ $item->t_name }}">
+                            <img src="{{ pare_url_file($item->t_avatar) }}" alt="{{ $item->t_name }}" >
                         </a>
                     </div>
                     <div class="info">
-                        <h6>Tuan Pham</h6>
-                        <p class="info-auth"><span class="icon"><i class="fa fas fa-briefcase"></i></span> <span class="name">Trung tâm đào tạo sáng lập bởi TS Nguyễn Hoàng Khắc Hiếu</span></p>
+                        <h6>{{ $item->t_name }}</h6>
+                        <p class="info-auth"><span class="icon"><i class="fa fas fa-briefcase"></i></span> <span class="name">{{ $item->t_jobh }}</span></p>
                     </div>
                     <div class="dashboard flex flex-jc-sb">
-                        @for($j = 1; $j <= 3; $j++)
-                            <div class="box-item flex flex-d">
-                                <span class="mb10">Nội dung</span>
-                                <span>100</span>
-                            </div>
-                        @endfor
+                        <div class="box-item flex flex-d">
+                            <span class="mb10">Số <br> khóa học</span>
+                            <span>100</span>
+                        </div>
+                        <div class="box-item flex flex-d">
+                            <span class="mb10">Tổng <br> giờ giảng</span>
+                            <span>100</span>
+                        </div>
+                        <div class="box-item flex flex-d">
+                            <span class="mb10">Tổng <br>câu hỏi</span>
+                            <span>100</span>
+                        </div>
                     </div>
-                    <a href="" title="Xem thêm" class="btn btn-secondary">Xem thêm</a>
+                    <a href="{{ route('get.teacher.course',$item->t_slug) }}" target="_blank" title="Xem thêm" class="btn btn-secondary">Xem thêm</a>
                 </div>
 
-            @endfor
+            @endforeach
             <div class="clear"></div>
         </div>
     </div>
