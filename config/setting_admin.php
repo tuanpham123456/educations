@@ -26,11 +26,19 @@ return[
                   'name'  => 'Khóa học',
                   'route' => 'get_admin.course.index'
               ],
-
-
-
-
           ]
-      ]
+      ],
+      [
+            'name'  => 'System Data',
+            'class-icon'  => 'la la-database',
+            'sub'   => [
+                [
+                    'name'  => 'Slide',
+                    'route' => 'get_admin.slide.index'
+                ],
+
+            ]
+        ],
+
     ]
 ];

@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @stop
 @section('content')
-    @include('pages.home.include._inc_banner')
+    @include('pages.home.include._inc_banner',['slides' => $slides] )
     @include('pages.home.include._inc_section_one')
     {{--khóa học 0đ--}}
     @include('pages.home.include._inc_section_two',['courses' => $coursesFree])

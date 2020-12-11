@@ -22,11 +22,11 @@
             <div class="box-banner">
                 <div class="banner_top">
                     <div class="lists js-banner owl-carousel owl-theme">
-                    @for($i = 1; $i <= 5; $i ++)
-                       <a>
-                           <img src="{{ asset('images/banner.png') }}" alt="">
+                    @foreach($slides ?? [] as $item)
+                       <a href="{{ $item->s_link }}">
+                           <img src="{{ pare_url_file($item->s_banner)}}" alt="{{ $item->s_name }}">
                         </a>
-                    @endfor
+                    @endforeach
                 </div>
 
                 </div>

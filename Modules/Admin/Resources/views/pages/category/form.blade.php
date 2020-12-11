@@ -28,7 +28,6 @@
                         <label class="required" for="exampleInputEmail1">Sort <span>(*)</span></label>
                         <input type="number" class="form-control"  value="{{ old('c_sort',$category->c_sort ?? '0') }}" name="c_sort"  placeholder="">
                         <span class="d-block text-warning"><a >Thứ tự được sắp xếp từ bé đến lớn</a></span>
-
                     </div>
                     <div class="form-group">
                         <label class="required" for="exampleInputEmail1"> Parent <span>(*)</span></label>

@@ -8,6 +8,7 @@ use App\Models\Education\Course;
 use App\Models\Education\Tag;
 use App\Models\Education\Teacher;
 
+use App\Models\System\Slide;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -31,10 +32,16 @@ class HomeController extends Controller
             ->orderByDesc('c_sort')
             ->select('id','c_name','c_icon','c_slug','c_avatar')
             ->get();
+        // lấy slide
+        $slides  = Slide::where('s_status',Slide::STATUS_DEFAULT)
+            ->orderByDesc('s_sort')
+            ->get();
+
         $viewData   = [
             'tagsHot'           => $tagsHot,
             'coursesFree'       => $coursesFree,
             'categoriesParent'  => $categoriesParent,
+            'slides'            => $slides
         ];
         return view ('pages.home.index',$viewData);
     }
