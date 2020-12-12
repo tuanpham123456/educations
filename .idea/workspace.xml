@@ -23,31 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87263d7a-f976-42ff-bb3e-ac35780a9209" name="Default Changelist" comment="mix backend admin">
-      <change afterPath="$PROJECT_DIR$/resources/assets/js/pages/teacher/teacher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/scss/pages/teacher/include/_inc_teacher.content.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/scss/pages/teacher/include/_inc_teacher.course.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/scss/pages/teacher/include/_inc_teacher_header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/scss/pages/teacher/teacher.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/teacher/include/_inc_content.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/teacher/include/_inc_course.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/teacher/include/_inc_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/category.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/category.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/course.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/course.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js_admin/admin_dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js_admin/admin_dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/bases/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/bases/_list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scss/pages/home/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scss/pages/home/home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/category/include/_inc_breadcrumb.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/teacher/include/_inc_breadcrumb.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/category/include/_inc_item_course.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/category/include/_inc_item_course.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_section_two.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_section_two.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/teacher/course.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/teacher/course.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/teacher.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/teacher.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/bases/_heading.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/bases/_heading.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scss/pages/teacher/include/_inc_teacher.content.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scss/pages/teacher/include/_inc_teacher.content.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scss/pages/teacher/include/_inc_teacher.course.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scss/pages/teacher/include/_inc_teacher.course.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scss/pages/teacher/include/_inc_teacher_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scss/pages/teacher/include/_inc_teacher_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/teacher/include/_inc_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/teacher/include/_inc_content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/teacher/include/_inc_course.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/teacher/include/_inc_course.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,7 +323,7 @@
       <workItem from="1607613665478" duration="3657000" />
       <workItem from="1607668874078" duration="3670000" />
       <workItem from="1607681295299" duration="2765000" />
-      <workItem from="1607735794107" duration="7640000" />
+      <workItem from="1607735794107" duration="11631000" />
     </task>
     <task id="LOCAL-00001" summary="Css item course">
       <created>1603634294026</created>
@@ -535,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607682946057</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="css teacher header">
+      <created>1607744136117</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1607744136117</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +547,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="mix backend admin" />
     <MESSAGE value="mix" />
     <MESSAGE value="footer" />
     <MESSAGE value="nav header" />
@@ -579,7 +571,8 @@
     <MESSAGE value="show data course0đ" />
     <MESSAGE value="system data (slide) backend&#10;show _inc_banner &#10;Helper create function&#10;autoload" />
     <MESSAGE value="show teacher out home" />
-    <option name="LAST_COMMIT_MESSAGE" value="show teacher out home" />
+    <MESSAGE value="css teacher header" />
+    <option name="LAST_COMMIT_MESSAGE" value="css teacher header" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="292" key="#Composer" timestamp="1603628582271">
@@ -598,10 +591,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="475" y="55" key="#PHP/0.0.1536.824@0.0.1536.824" timestamp="1603638065939" />
-    <state x="361" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606126479654">
+    <state x="361" y="75" width="1089" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607747676502">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1606126479654" />
+    <state x="361" y="75" width="1089" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1607747676502" />
     <state x="536" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603896344485">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -639,11 +632,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="604" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1607671163795" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1607682948314">
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1607744141687">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603976651077" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1607682948314" />
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1607744141687" />
     <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606676966835">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -662,11 +655,11 @@
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603955216936" />
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1606918625341" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1607742070726">
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1607746585780">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603975488859" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607742070726" />
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1607746585780" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
