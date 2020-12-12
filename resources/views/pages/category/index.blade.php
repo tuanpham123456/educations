@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{ asset('css/category.css') }}">
 @stop
 @section('content')
-    @include('pages.category.include._inc_breadcrumb')
+    @include('pages.teacher.include._inc_breadcrumb')
     @include('pages.category.include._inc_fill_search')
 
     <div class="main-content mt20">

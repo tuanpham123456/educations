@@ -22,7 +22,7 @@ class HomeController extends Controller
             ->select('t_name','t_hot','id','t_slug')
             ->get();
         // show khóa hoc free
-        $coursesFree    = Course::with('teacher:id,t_name,t_avatar,t_slug')
+        $coursesFree    = Course::with('teacher:id,t_name,t_avatar,t_slug,t_job')
             ->where('c_price',0)
             ->orderByDesc('id')
             ->limit(16)

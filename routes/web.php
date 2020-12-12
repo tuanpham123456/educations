@@ -16,9 +16,11 @@ use App\Http\Controllers\Frontend\TeacherController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('',[HomeController::class,'index']);
-// render danh mục sang HubCourseController
-Route::get('/khoa-hoc/{slug?}',[HubCourseController::class,'render'])->name('get.course.render');
-Route::get('/tat-ca-khoa-hoc',[CategoryController::class,'index'])->name('get.category.all');
+Route::group(['namespace' => 'Frontend'],function (){
+    Route::get('',[HomeController::class,'index']);
+    // render danh mục sang HubCourseController
+    Route::get('/khoa-hoc/{slug?}',[HubCourseController::class,'render'])->name('get.course.render');
+    Route::get('/tat-ca-khoa-hoc',[CategoryController::class,'index'])->name('get.category.all');
 
-Route::get('/giang-vien/{slug}',[TeacherController::class,'getCourseByTeacherSlug'])->name('get.teacher.course');
+    Route::get('/giang-vien/{slug}',[TeacherController::class,'getCourseByTeacherSlug'])->name('get.teacher.course');
+});

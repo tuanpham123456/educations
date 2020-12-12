@@ -1854,6 +1854,11 @@ strong {
   float: left;
 }
 
+.lists .item-4-0 {
+  width: calc(100%/4);
+  float: left;
+}
+
 .lists .item-5 {
   width: calc(100%/5 - 10px);
   float: left;

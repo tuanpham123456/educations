@@ -8,7 +8,7 @@
                 </a>
                 <meta itemprop="position" content="1">
             </li>
-            <li><a href="">Danh sách khóa học</a></li>
+            <li><a href="">Giảng viên</a></li>
             <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="active">
                 <span itemprop="name">Khuyến mãi</span>
                 <meta itemprop="url" content="">

@@ -9,7 +9,7 @@
                     <div class="avatar">
                         <div class="img">
                             <a href="{{ route('get.course.render',['slug' => $item->c_slug.'-cr']) }}" title="{{ $item->c_name }}">
-                                <img src="{{ asset('images/section_1.jpg') }}" alt="{{ $item->c_name }}">
+                                <img src="{{ asset(pare_url_file($item->c_avatar)) }}" alt="{{ $item->c_name }}">
                             </a>
                             <div class="img_badget">
                                 <p class="flex flex-jc-sb pl10 pr10">
@@ -26,7 +26,7 @@
                     <div class="info">
                         <h3 class="title"><a href="">{{ $item->c_name }}</a></h3>
                         <p class="info-auth"><span class="icon"><i class="fa fa-user-md"></i></span> <span class="name">{{ $item->teacher->t_name }}</span></p>
-                        <p class="info-auth"><span class="icon"><i class="fa fas fa-briefcase"></i></span> <span class="name">Trung tâm đào tạo sáng lập bởi TS Nguyễn Hoàng Khắc Hiếu</span></p>
+                        <p class="info-auth"><span class="icon"><i class="fa fas fa-briefcase"></i></span> <span class="name">{{ $item->teacher->t_job }}</span></p>
                         <p class="flex flex-jc-sb mt10">
                             <a href="" class="video"><i class="fa fa-play-circle"></i>Học thử</a>
                             <span class="price"> Miễn phí</span>

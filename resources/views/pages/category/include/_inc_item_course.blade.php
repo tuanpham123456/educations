@@ -3,7 +3,7 @@
         <div class="avatar">
             <div class="img">
                 <a href="">
-                    <img src="{{ asset('images/section_1.jpg') }}" alt="">
+                    <img src="{{ asset(pare_url_file($item->c_avatar)) }}" alt="">
                 </a>
                 <div class="img_badget">
                     <p class="flex flex-jc-sb pl10 pr10">
