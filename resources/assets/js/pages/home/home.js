@@ -1,4 +1,5 @@
 import 'owl.carousel'
+import AutoloadJs from "../../../components/_inc_autoload";
 var Home = {
     init: function (){
         this.runBanner()
@@ -72,5 +73,6 @@ var Home = {
 
 }
 $(function(){
+    AutoloadJs.init()
     Home.init()
 })
