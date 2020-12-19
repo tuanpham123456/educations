@@ -1,7 +1,9 @@
 @import "./../../assets/plugins/mscrollbar/jquery.mCustomScrollbar.css";
 @import "./../../assets/plugins/sidebar/sidebar.css";
+@import "./../../assets/plugins/sumoselect/sumoselect.css";
 @import "./../../assets/css/sidemenu.css";
 @import "./../../assets/plugins/jqvmap/jqvmap.min.css";
+@import "./../../assets/plugins/select2/css/select2.min.css";
 @import "./../../assets/css/style.css";
 @import "./../../assets/css/style-dark.css";
 @import "./../../assets/css/skin-modes.css";
@@ -10,7 +12,6 @@
 @import "./../../assets/css/icons.css";
 @import "./../components/custome";
 @import "./../components/custome_checkbox";
-
 @import "~filepond/dist/filepond.min.css";
 @import "~filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css";
 @import "~toastr";

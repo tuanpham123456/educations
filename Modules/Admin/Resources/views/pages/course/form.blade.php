@@ -1,3 +1,8 @@
+<style>
+    .text-wrap .example .form-group{
+        margin-bottom: 1rem;
+    }
+</style>
 <form class="form-horizontal" autocomplete="off" method="post">
     @csrf
     <div class="row">
@@ -18,7 +23,9 @@
                             </div>
                             <div class="panel-body tabs-menu-body main-content-body-right border-top-0 border">
                                 <div class="tab-content">
+                                    {{--tag 1 (name,slug,tag,price,sale,teacher,category)--}}
                                     <div class="tab-pane active" id="tab1">
+                                        {{--name--}}
                                         <div class="form-group">
                                             <label class="required" for="exampleInputEmail1"> Name <span>(*)</span></label>
                                             <input type="text" class="form-control keypress-count" data-title-seo=".title-seo" data-slug=".slug"
@@ -27,6 +34,7 @@
                                                 <span class="text-danger">{{ $errors->first('c_name') }}</span>
                                             @endif
                                         </div>
+                                        {{--slug--}}
                                         <div class="form-group">
                                             <label class="required" for="exampleInputEmail1">Slug <span>(*)</span></label>
                                             <input type="text" class="form-control slug"  value="{{ old('c_slug',$course->c_slug ?? '') }}" name="c_slug"  placeholder="">
@@ -34,7 +42,20 @@
                                                 <span class="text-danger">{{ $errors->first('c_slug') }}</span>
                                             @endif
                                         </div>
+                                        {{--tag--}}
+                                        <div class="form-group">
+                                            <label  for="exampleInputEmail1">Tag</label>
+                                            <select name="c_teacher_id" class="form-control js-select2"
+                                                    onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1" multiple>
+                                                <!--placeholder-->
+                                                @foreach($teachers as $item)
+                                                    <option title="{{ $item->t_name }}" value="{{ old('t_name',$item->id)}}">{{{ $item->t_name }}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        {{--Price,Sale,teacher,category--}}
                                         <div class="row">
+                                            {{--price--}}
                                             <div class="col-sm-3">
                                                 <div class="form-group">
                                                     <label class="required" for="exampleInputEmail1">Price<span>(*)</span></label>
@@ -44,6 +65,7 @@
                                                     @endif
                                                 </div>
                                             </div>
+                                            {{--sale--}}
                                             <div class="col-sm-3">
                                                 <div class="form-group">
                                                     <label class="required" for="exampleInputEmail1">Sale<span>(*)</span></label>
@@ -53,39 +75,52 @@
                                                     @endif
                                                 </div>
                                             </div>
+                                            {{--teacher--}}
                                             <div class="col-sm-3">
                                                 <div class="form-group">
                                                     <label class="required" for="exampleInputEmail1">Teacher<span>(*)</span></label>
-                                                    <select name="c_teacher_id" class="form-control SlectBox SumoUnder"
-                                                            onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
-                                                        <!--placeholder-->
-                                                        @foreach($teachers as $item)
-                                                            <option title="{{ $item->t_name }}" value="{{ old('t_name',$item->id)}}">{{{ $item->t_name }}}</option>
-                                                        @endforeach
-                                                    </select>
-
+                                                    <div class="SumoSelect testselect1 sumo_somename" tabindex="0" role="button" aria-expanded="true">
+                                                        <select name="c_teacher_id" class="form-control SlectBox SumoUnder"
+                                                                onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
+                                                            <!--placeholder-->
+                                                            @foreach($teachers as $item)
+                                                                <option title="{{ $item->t_name }}" value="{{ old('t_name',$item->id)}}">{{{ $item->t_name }}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            {{--category--}}
                                             <div class="col-sm-3">
                                                 <div class="form-group">
                                                     <label class="required" for="exampleInputEmail1">Category<span>(*)</span></label>
-                                                    <select name="c_category_id" class="form-control SlectBox SumoUnder"
-                                                            onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
-                                                        @foreach($categories as $item)
-                                                            <option value="{{ $item->id }}"  title="{{ $item->c_name }}">{{{ $item->c_name }}}</option>
-                                                        @endforeach
-                                                    </select>
-
+                                                    <div class="SumoSelect selectsum1 sumo_somename" tabindex="0" role="button" aria-expanded="true">
+                                                        <select name="c_category_id" class="form-control SlectBox SumoUnder"
+                                                                onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
+                                                            @foreach($categories as $item)
+                                                                <option value="{{ $item->id }}"  title="{{ $item->c_name }}">{{{ $item->c_name }}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-
+                                        {{--total-time--}}
+                                        <div class="form-group">
+                                            <label class="required" for="exampleInputEmail1">Total time<span>(*)</span></label>
+                                            <input type="text" class="form-control"  value="{{ old('c_total_time',$course->c_total_time ?? '') }}" name="c_total_time"  placeholder="">
+                                            @if($errors->first('c_total_time'))
+                                                <span class="text-danger">{{ $errors->first('c_total_time') }}</span>
+                                            @endif
+                                        </div>
                                     </div>
+                                    {{--tag 2--}}
                                     <div class="tab-pane" id="tab2">
                                         <p>dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
                                         <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime</p>
                                         <p class="mb-0">placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
                                     </div>
+                                    {{--tag 3--}}
                                     <div class="tab-pane" id="tab3">
                                         <p>praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,</p>
                                         <p class="mb-0">similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
@@ -96,6 +131,7 @@
                     </div>
                 </div>
             </div>
+            {{-- seo--}}
             <div class="card  box-shadow-0">
                 <div class="card-header">
                    <h4 class="card-title mb-1">SEO
@@ -120,7 +156,9 @@
                 </div>
             </div>
         </div>
+        {{--action,status,hot,position,avatar--}}
         <div class="col-lg-4">
+            {{--action--}}
             <div class="card  box-shadow-0">
                 <div class="card-body pt-3">
                     <div class="form-group">
@@ -137,6 +175,7 @@
                     </div>
                 </div>
             </div>
+            {{--status--}}
             <div class="card  box-shadow-0">
                 <div class="card-body pt-3">
                     <div class="form-group">
@@ -150,6 +189,7 @@
                     </div>
                 </div>
             </div>
+            {{--hot--}}
             <div class="card  box-shadow-0">
                 <div class="card-body pt-3">
                     <div class="form-group">
@@ -170,6 +210,7 @@
                     </div>
                 </div>
             </div>
+            {{--position--}}
             <div class="card  box-shadow-0">
                 <div class="card-body pt-3">
                     <div class="form-group">
@@ -185,6 +226,7 @@
 
                 </div>
             </div>
+            {{--avatar--}}
             <div class="card  box-shadow-0">
                 <div class="card-body pt-3">
                     <div class="form-group">
