@@ -13,9 +13,9 @@
 
         </div>
         <div class="lists">
-            @for($i = 1; $i <= 8; $i++)
-                @include('pages.components._inc_item_course')
-            @endfor
+            @foreach($courses as $course)
+                @include('pages.components._inc_item_course',['course' => $course])
+            @endforeach
             <div class="clear"></div>
         </div>
     </div>

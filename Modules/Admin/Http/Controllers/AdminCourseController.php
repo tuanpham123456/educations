@@ -34,6 +34,7 @@ class AdminCourseController extends AdminController
 
     public function store(AdminCourseRequest $request){
         $data                   = $request->except(['avatar','_token','save']);
+        $data['c_position_1']   = 0;
         $data['created_at']     = Carbon::now();
         if(!$request->c_title_seo) $data['c_title_seo'] = $request->c_name;
         if(!$request->c_description_seo) $data['c_description_seo'] = $request->c_name;
@@ -41,6 +42,8 @@ class AdminCourseController extends AdminController
         if (!$request->c_sale) $data['c_sale'] = 0;
         if (!$request->c_total_time) $data['c_total_time'] = 0;
         if (!$request->c_price) $data['c_price'] = 0;
+        // nếu tồn tại c_position_1 thì add bằng 1
+        if($request->c_position_1) $data['c_position_1'] = 1;
 
         $courseId = Course::insertGetId($data);
         if($courseId){
@@ -71,6 +74,7 @@ class AdminCourseController extends AdminController
         $course                 = Course::findOrFail($id);
         $teachers               = Teacher::find($id);
         $data                   = $request->except(['avatar','_token','save']);
+        $data['c_position_1']   = 0;
         $data['updated_at']     = Carbon::now();
 
 
@@ -80,8 +84,10 @@ class AdminCourseController extends AdminController
         if (!$request->c_sale) $data['c_sale'] = 0;
         if (!$request->c_total_time) $data['c_total_time'] = 0;
         if (!$request->c_price) $data['c_price'] = 0;
+        if($request->c_position_1) $data['c_position_1'] = 1;
+
         RenderUrlSeoCourseService::init($request->c_slug,SeoEducation::TYPE_COURSE,$id);
-        $course->fill($data)->save();
+        $course->update($data);
 
         $this->showMessagesSuccess("Cập nhật thành công");
         return redirect()->route('get_admin.course.index');

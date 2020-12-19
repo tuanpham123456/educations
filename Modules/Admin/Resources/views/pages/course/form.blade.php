@@ -60,7 +60,7 @@
                                                             onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
                                                         <!--placeholder-->
                                                         @foreach($teachers as $item)
-                                                            <option title="{{ $item->t_name }}" value="{{ $item->id }}">{{{ $item->t_name }}}</option>
+                                                            <option title="{{ $item->t_name }}" value="{{ old('t_name',$item->id)}}">{{{ $item->t_name }}}</option>
                                                         @endforeach
                                                     </select>
 
@@ -153,9 +153,44 @@
             <div class="card  box-shadow-0">
                 <div class="card-body pt-3">
                     <div class="form-group">
+                        <label class="" for="exampleInputEmail1"> Hot
+                            <div class="form-group">
+                                <label class="box-checkbox"> Nổi bật
+                                    <input type="radio" name="c_hot" {{ ($course->c_hot ?? 0) == 1 ? 'checked' : '' }}  value="1">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="box-checkbox"> Không nổi bật
+                                    <input type="radio" name="c_hot" {{ ($course->c_hot ?? 0) == 0 ? 'checked' : '' }} value="0">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card  box-shadow-0">
+                <div class="card-body pt-3">
+                    <div class="form-group">
+                        <label class="" for="exampleInputEmail1"> Position
+                            <div class="form-group">
+                                <label class="box-checkbox"> Nổi bật trang chủ
+                                    <input type="checkbox" name="c_position_1" {{ ($course->c_position_1 ?? 0) == 1 ? 'checked' : '' }} value="1">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card  box-shadow-0">
+                <div class="card-body pt-3">
+                    <div class="form-group">
                         <label for="exampleInputEmail1"> Avatar </label>
-                        <input type="file" class="filepond" name="avatar">
-                        <input type="hidden" name="c_avatar" id="avatar_uploads">
+                        <input type="file" class="filepond" value="{{ old('c_avatar',$course->c_avatar ?? '') }}" name="avatar">
+                        <input type="hidden" name="c_avatar" id="avatar_uploads" value="{{ old('c_avatar',$course->c_avatar ?? '') }}">
                     </div>
                 </div>
             </div>

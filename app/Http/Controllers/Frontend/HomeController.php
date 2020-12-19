@@ -15,11 +15,20 @@ use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     public function index(){
-        //show tag nổi bật
+        //show từ khóa nổi bật
         $tagsHot      = Tag::where('t_hot',Tag::HOT)
             ->orderByDesc('t_sort')
             ->limit(10)
             ->select('t_name','t_hot','id','t_slug')
+            ->get();
+        // khóa học nổi bật ở vị trí thứ nhất
+        $courseHotPositionOne =  Course::with('teacher:id,t_name,t_avatar,t_slug,t_job')
+            ->where([
+                'c_position_1' => 1,
+                'c_hot'        => 1
+            ])
+            ->orderByDesc('id')
+            ->limit(8)
             ->get();
         // show khóa hoc free
         $coursesFree    = Course::with('teacher:id,t_name,t_avatar,t_slug,t_job')
@@ -44,6 +53,7 @@ class HomeController extends Controller
             'categoriesParent'  => $categoriesParent,
             'slides'            => $slides,
             'teachers'          => $teachers,
+            'courseHotPositionOne' => $courseHotPositionOne,
         ];
         return view ('pages.home.index',$viewData);
     }

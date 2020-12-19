@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Education\Teacher;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -27,4 +28,5 @@ class Category extends Model
     public function getStatus(){
         return Arr::get($this->status, $this->c_status , "[N\A]");
     }
+
 }

@@ -28,7 +28,6 @@ class AdminAjaxUploadImageController extends Controller
         }catch (\Exception $exception){
             Log::error("[processUpload]: ".$exception->getMessage());
         }
-
         return false;
     }
 }
