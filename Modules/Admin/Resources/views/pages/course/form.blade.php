@@ -45,11 +45,11 @@
                                         {{--tag--}}
                                         <div class="form-group">
                                             <label  for="exampleInputEmail1">Tag</label>
-                                            <select name="c_teacher_id" class="form-control js-select2"
+                                            <select name="tags[]" class="form-control js-select2"
                                                     onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1" multiple>
                                                 <!--placeholder-->
-                                                @foreach($teachers as $item)
-                                                    <option title="{{ $item->t_name }}" value="{{ old('t_name',$item->id)}}">{{{ $item->t_name }}}</option>
+                                                @foreach($tags as $item)
+                                                    <option title="{{ $item->t_name }}" {{ in_array($item->id, $tagOld) ? "selected" : "" }} value="{{ old('t_name',$item->id)}}">{{{ $item->t_name }}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
