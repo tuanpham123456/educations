@@ -23,7 +23,7 @@
                             </div>
                             <div class="panel-body tabs-menu-body main-content-body-right border-top-0 border">
                                 <div class="tab-content">
-                                    {{--tag 1 (name,slug,tag,price,sale,teacher,category)--}}
+                                    {{--tag 1 (name,teacher,category,slug,tag,price,sale)--}}
                                     <div class="tab-pane active" id="tab1">
                                         {{--name--}}
                                         <div class="form-group">
@@ -34,6 +34,39 @@
                                                 <span class="text-danger">{{ $errors->first('c_name') }}</span>
                                             @endif
                                         </div>
+                                        <div class="form-group">
+                                            {{--teacher--}}
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="required" for="exampleInputEmail1">Teacher<span>(*)</span></label>
+                                                    <div class="SumoSelect testselect1 sumo_somename" tabindex="0" role="button" aria-expanded="true">
+                                                        <select name="c_teacher_id" class="form-control SlectBox SumoUnder"
+                                                                onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
+                                                            <!--placeholder-->
+                                                            @foreach($teachers as $item)
+                                                                <option title="{{ $item->t_name }}" value="{{ old('t_name',$item->id)}}">{{{ $item->t_name }}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {{--category--}}
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="required" for="exampleInputEmail1">Category<span>(*)</span></label>
+                                                    <div class="SumoSelect selectsum1 sumo_somename" tabindex="0" role="button" aria-expanded="true">
+                                                        <select name="c_category_id" class="form-control SlectBox SumoUnder"
+                                                                onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
+                                                            @foreach($categories as $item)
+                                                                <option value="{{ $item->id }}"  title="{{ $item->c_name }}">{{{ $item->c_name }}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                         {{--slug--}}
                                         <div class="form-group">
                                             <label class="required" for="exampleInputEmail1">Slug <span>(*)</span></label>
@@ -56,7 +89,7 @@
                                         {{--Price,Sale,teacher,category--}}
                                         <div class="row">
                                             {{--price--}}
-                                            <div class="col-sm-3">
+                                            <div class="col">
                                                 <div class="form-group">
                                                     <label class="required" for="exampleInputEmail1">Price<span>(*)</span></label>
                                                     <input type="text" class="form-control"  value="{{ old('c_price',$course->c_price ?? '') }}" name="c_price"  placeholder="">
@@ -66,7 +99,7 @@
                                                 </div>
                                             </div>
                                             {{--sale--}}
-                                            <div class="col-sm-3">
+                                            <div class="col">
                                                 <div class="form-group">
                                                     <label class="required" for="exampleInputEmail1">Sale<span>(*)</span></label>
                                                     <input type="text" class="form-control"  value="{{ old('c_sale',$course->c_sale ?? '') }}" name="c_sale"  placeholder="">
@@ -75,43 +108,15 @@
                                                     @endif
                                                 </div>
                                             </div>
-                                            {{--teacher--}}
-                                            <div class="col-sm-3">
+                                            <div class="col">
                                                 <div class="form-group">
-                                                    <label class="required" for="exampleInputEmail1">Teacher<span>(*)</span></label>
-                                                    <div class="SumoSelect testselect1 sumo_somename" tabindex="0" role="button" aria-expanded="true">
-                                                        <select name="c_teacher_id" class="form-control SlectBox SumoUnder"
-                                                                onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
-                                                            <!--placeholder-->
-                                                            @foreach($teachers as $item)
-                                                                <option title="{{ $item->t_name }}" value="{{ old('t_name',$item->id)}}">{{{ $item->t_name }}}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
+                                                    <label class="required" for="exampleInputEmail1">Total time<span>(*)</span></label>
+                                                    <input type="text" class="form-control"  value="{{ old('c_total_time',$course->c_total_time ?? '') }}" name="c_total_time"  placeholder="">
+                                                    @if($errors->first('c_total_time'))
+                                                        <span class="text-danger">{{ $errors->first('c_total_time') }}</span>
+                                                    @endif
                                                 </div>
                                             </div>
-                                            {{--category--}}
-                                            <div class="col-sm-3">
-                                                <div class="form-group">
-                                                    <label class="required" for="exampleInputEmail1">Category<span>(*)</span></label>
-                                                    <div class="SumoSelect selectsum1 sumo_somename" tabindex="0" role="button" aria-expanded="true">
-                                                        <select name="c_category_id" class="form-control SlectBox SumoUnder"
-                                                                onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
-                                                            @foreach($categories as $item)
-                                                                <option value="{{ $item->id }}"  title="{{ $item->c_name }}">{{{ $item->c_name }}}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {{--total-time--}}
-                                        <div class="form-group">
-                                            <label class="required" for="exampleInputEmail1">Total time<span>(*)</span></label>
-                                            <input type="text" class="form-control"  value="{{ old('c_total_time',$course->c_total_time ?? '') }}" name="c_total_time"  placeholder="">
-                                            @if($errors->first('c_total_time'))
-                                                <span class="text-danger">{{ $errors->first('c_total_time') }}</span>
-                                            @endif
                                         </div>
                                     </div>
                                     {{--tag 2--}}
@@ -139,8 +144,8 @@
                    </h4>
                     <div class="view-seo">
                         <a href="" class="view-seo-title title-seo">{{ old('c_title_seo',$course->c_title_seo ?? '') }}</a>
-                        <p class="view-seo-slug">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <span class="slug">121131</span></p>
-                        <p class="mb-2 view-seo-description">aaaaaaaaaaaaaaaaaa</p>
+                        <p class="view-seo-slug"><span class="slug">121131</span></p>
+                        <p class="mb-2 view-seo-description"></p>
                     </div>
                 </div>
                 <div class="card-body pt-3 box-seo hide" >

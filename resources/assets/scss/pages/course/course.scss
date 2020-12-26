@@ -6,4 +6,6 @@
 @import "./include/inc_header_course";
 @import "./include/inc_page.course";
 @import "./include/inc_vote";
-
+@import "./../../components/inc_popup";
+@import "./../../components/inc_popup_auth";
+@import "~jquery-modal";

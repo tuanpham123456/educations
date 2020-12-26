@@ -22,6 +22,8 @@ class HubCourseController extends Controller
                     return (new CategoryController())->getCourseByCategory($urlSeo->se_id,$request);
                 case SeoEducation::TYPE_COURSE:
                     return (new CourseController())->getCourseDetail($urlSeo->se_id,$request);
+                case SeoEducation::TYPE_TAG:
+                    return (new TagController())->getCourseByTag($urlSeo->se_id,$request);
             }
         }
         return redirect()->route('get.category.all');

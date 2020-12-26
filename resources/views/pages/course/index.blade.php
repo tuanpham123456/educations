@@ -141,6 +141,5 @@
 
 @stop
 @section('js')
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <script src="{{ asset('js/course.js') }}"></script>
 @stop

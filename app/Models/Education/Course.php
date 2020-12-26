@@ -30,4 +30,8 @@ class Course extends Model
     public function teacher(){
         return $this->belongsTo(Teacher::class,'c_teacher_id');
     }
+
+    public function tags(){
+        return $this->belongsToMany(Tag::class,'courses_tags','ct_course_id','ct_tag_id');
+    }
 }

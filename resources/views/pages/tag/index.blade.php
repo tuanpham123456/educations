@@ -3,8 +3,8 @@
     <link rel="stylesheet" href="{{ asset('css/category.css') }}">
 @stop
 @section('content')
-    @include('pages.category.include._inc_breadcrumb')
-    @include('pages.category.include._inc_fill_search')
+    @include('pages.tag.include._inc_breadcrumb')
+    @include('pages.tag.include._inc_fill_search')
 
     <div class="main-content mt20">
        <div class="container">
@@ -55,11 +55,11 @@
                </div>
                <div class="box-75 box-content">
                    <div class="results mb10 mt10">
-                       <b>20 </b>Khóa học <b>Con người</b>
+                       <b>20 </b>Khóa học <b>{{ $tag->t_name }}</b>
                    </div>
                    <div class="lists">
                        @forelse($courses as $item)
-                           @include('pages.category.include._inc_item_course',['courses' => $item])
+                           @include('pages.tag.include._inc_item_course',['courses' => $item])
                        @empty
                            <p>Dữ liệu chưa được cập nhật</p>
                        @endforelse

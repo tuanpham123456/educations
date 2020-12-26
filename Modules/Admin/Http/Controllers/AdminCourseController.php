@@ -29,10 +29,12 @@ class AdminCourseController extends AdminController
         $teachers       = Teacher::orderByDesc('id')->get();
         $tags           = Tag::all();
 
+        $tagOld         = [];
         $viewData       = [
             'categories'    => $categories,
             'teachers'      => $teachers,
             'tags'          => $tags,
+            'tagOld'        => $tagOld,
         ];
         return view ('admin::pages.course.create',$viewData);
     }
