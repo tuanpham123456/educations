@@ -228,7 +228,6 @@
                             </div>
                         </label>
                     </div>
-
                 </div>
             </div>
             {{--avatar--}}

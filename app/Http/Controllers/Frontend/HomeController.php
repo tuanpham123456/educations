@@ -30,6 +30,14 @@ class HomeController extends Controller
             ->orderByDesc('id')
             ->limit(8)
             ->get();
+        // show category nổi bật ở vị trí 1
+        $categoryHotPositionOne =  Category::where([
+                'c_position_1' => 1,
+                'c_hot'        => 1
+            ])
+            ->orderByDesc('id')
+            ->limit(8)
+            ->get();
         // show khóa hoc free
         $coursesFree    = Course::with('teacher:id,t_name,t_avatar,t_slug,t_job')
             ->where('c_price',0)
@@ -54,6 +62,7 @@ class HomeController extends Controller
             'slides'            => $slides,
             'teachers'          => $teachers,
             'courseHotPositionOne' => $courseHotPositionOne,
+            'categoryHotPositionOne' => $categoryHotPositionOne,
         ];
         return view ('pages.home.index',$viewData);
     }

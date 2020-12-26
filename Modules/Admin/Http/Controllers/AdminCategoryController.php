@@ -27,8 +27,10 @@ class AdminCategoryController extends AdminController
     public function store(AdminCategoryRequest $request){
         $data                   = $request->except(['avatar','_token','save']);
         $data['created_at']     = Carbon::now();
+        $data['c_position_1']   = 0;
         if(!$request->c_title_seo) $data['c_title_seo'] = $request->c_name;
         if(!$request->c_description_seo) $data['c_description_seo'] = $request->c_name;
+        if($request->c_position_1) $data['c_position_1'] = 1;
 
         $categoryId = Category::insertGetId($data);
         if($categoryId){
@@ -54,9 +56,12 @@ class AdminCategoryController extends AdminController
         $category               = Category::findOrFail($id);
         $data                   = $request->except(['avatar','_token','save']);
         $data['updated_at']     = Carbon::now();
+        $data['c_position_1']   = 0;
 
         if(!$request->c_title_seo) $data['c_title_seo'] = $request->c_name;
         if(!$request->c_description_seo) $data['c_description_seo'] = $request->c_name;
+        if($request->c_position_1) $data['c_position_1'] = 1;
+
         RenderUrlSeoCourseService::init($request->c_slug,SeoEducation::TYPE_CATEGORY,$id);
 
         $category->fill($data)->save();
