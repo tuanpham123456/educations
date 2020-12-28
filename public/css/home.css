@@ -2528,64 +2528,18 @@ footer .footer_botton {
 
 .section_tags .owl-item a {
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
   display: inline-block;
-  color: white;
+  color: #222222;
   border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #FB236A;
 }
 
-.section_tags .owl-item:nth-child(2n+1) {
-  border-color: #fdd692;
-  background-color: #fdd692;
-}
-
-.section_tags .owl-item:nth-child(2n+1) a {
-  color: white;
-}
-
-.section_tags .owl-item:nth-child(2n+2) {
-  border-color: #d9e5e7;
-  background-color: #d9e5e7;
-}
-
-.section_tags .owl-item:nth-child(2n+2) a {
-  color: white;
-}
-
-.section_tags .owl-item:nth-child(2n+3) {
-  border-color: #a8dba8;
-  background-color: #a8dba8;
-}
-
-.section_tags .owl-item:nth-child(2n+3) a {
-  color: white;
-}
-
-.section_tags .owl-item:nth-child(2n+4) {
-  border-color: #df999a;
-  background-color: #fd999a;
-}
-
-.section_tags .owl-item:nth-child(2n+4) a {
-  color: white;
-}
-
-.section_tags .owl-item:nth-child(2n+5) {
-  border-color: #dedcee;
-  background-color: #dedcee;
-}
-
-.section_tags .owl-item:nth-child(2n+5) a {
-  color: white;
-}
-
-.section_tags .owl-item:nth-child(2n+6) {
-  border-color: #a3daff;
-  background-color: #a3daff;
-}
-
-.section_tags .owl-item:nth-child(2n+6) a {
-  color: white;
+.section_tags .owl-item a.active {
+  border: 1px solid #fb6a00;
+  font-weight: bold;
 }
 
 .box-course {
@@ -3272,5 +3226,55 @@ footer .footer_botton {
 
 .modal-auth .auth-right .password-show:hover {
   cursor: pointer;
+}
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
+
+.js-loading-1 {
+  display: none;
 }
 

@@ -5,6 +5,7 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\CategoryController;
 use App\Http\Controllers\Frontend\HubCourseController;
 use App\Http\Controllers\Frontend\TeacherController;
+use App\Http\Controllers\Frontend\Ajax\AjaxHomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,8 @@ Route::group(['namespace' => 'Frontend'],function (){
     Route::get('/tat-ca-khoa-hoc',[CategoryController::class,'index'])->name('get.category.all');
 
     Route::get('/giang-vien/{slug}',[TeacherController::class,'getCourseByTeacherSlug'])->name('get.teacher.course');
+});
+Route::group(['namespace' => 'Ajax','prefix' => 'ajax'],function (){
+   Route::get('course/list-by-category/{id}',[AjaxHomeController::class,'getCourseByCategory'])
+       ->name('ajax_get.course.by_category');
 });

@@ -7,16 +7,13 @@
         <div class="section_tags">
             <div class="list js-tags owl-carousel owl-theme" style="text-align: center">
                 @foreach($category as $item)
-                    <a href="" data-id="{{ $item->id }}"  class="js-course-by-category" title="{{ $item->c_name }}">{{ $item->c_name }}</a>
+                    <a href="{{ route('ajax_get.course.by_category',$item->id) }}" data-id="{{ $item->id }}"  class="js-course-by-category" title="{{ $item->c_name }}">{{ $item->c_name }}</a>
                 @endforeach
             </div>
 
         </div>
-        <div class="lists">
-            @foreach($courses as $course)
-                @include('pages.components._inc_item_course',['course' => $course])
-            @endforeach
-            <div class="clear"></div>
+        <div class="lists" id="courseHtml">
+            @include('pages.home.include._inc_course_list',['courses' => $courses])
         </div>
     </div>
 </section>

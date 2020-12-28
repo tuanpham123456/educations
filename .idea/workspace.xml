@@ -23,13 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87263d7a-f976-42ff-bb3e-ac35780a9209" name="Default Changelist" comment="mix backend admin">
+      <change afterPath="$PROJECT_DIR$/resources/assets/scss/components/loading/_inc_loading.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/components/loading/_inc_loading_1.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_course_list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminCategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/category/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/category/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/course/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/course/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminCourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminCourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/js/pages/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/js/pages/home/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scss/pages/home/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scss/pages/home/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scss/pages/home/include/_inc_section_one.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scss/pages/home/include/_inc_section_one.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/valex/assets/js/modal-popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/valex/assets/js/modal-popup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_section_one.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/home/include/_inc_section_one.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,25 +197,25 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="VAR" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pages/tag/include" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\educations\resources\views\pages\teacher\include" />
-      <recent name="C:\xampp\htdocs\educations\public\images" />
-      <recent name="C:\xampp\htdocs\educations\resources\assets\scss\components" />
-      <recent name="C:\xampp\htdocs\educations\resources\assets\valex\js" />
-      <recent name="C:\xampp\htdocs\educations\resources\assets\valex\assets\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\educations\resources\views\pages\tag\include" />
       <recent name="C:\xampp\htdocs\educations\resources\views\pages\category\include" />
       <recent name="C:\xampp\htdocs\educations\resources\views\pages\tag" />
       <recent name="C:\xampp\htdocs\educations\Modules\Admin\Resources\views\template" />
       <recent name="C:\xampp\htdocs\educations\Modules\Admin\Resources\views\pages\slide" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\educations\resources\assets\scss\components\loading" />
+      <recent name="C:\xampp\htdocs\educations\resources\views\pages\teacher\include" />
+      <recent name="C:\xampp\htdocs\educations\public\images" />
+      <recent name="C:\xampp\htdocs\educations\resources\assets\scss\components" />
+      <recent name="C:\xampp\htdocs\educations\resources\assets\valex\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -336,7 +343,12 @@
       <workItem from="1608903325862" duration="3147000" />
       <workItem from="1608983529560" duration="5790000" />
       <workItem from="1608989382762" duration="515000" />
-      <workItem from="1608997788547" duration="1219000" />
+      <workItem from="1608997788547" duration="2409000" />
+      <workItem from="1609063750399" duration="1899000" />
+      <workItem from="1609065677588" duration="28000" />
+      <workItem from="1609066534074" duration="153000" />
+      <workItem from="1609068145274" duration="1495000" />
+      <workItem from="1609142211058" duration="3919000" />
     </task>
     <task id="LOCAL-00001" summary="Css item course">
       <created>1603634294026</created>
@@ -590,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608989858925</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="update database category add c_postion_1 &#10;show category theo nổi bật và position">
+      <created>1608999353322</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1608999353322</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +628,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix laravel mix _inc_run_message.js vs _inc_seo.js fix mix js" />
     <MESSAGE value="toastr tag,use sweetalert2 yes/no delete tag" />
     <MESSAGE value="show status" />
     <MESSAGE value="uploads image tags (use ajax in AdminAjaxUploadImage) mix js init_filepond.js" />
@@ -634,7 +652,8 @@
     <MESSAGE value="create database courses_tags&#10;create model Education/CourseTag" />
     <MESSAGE value="syncTagCourse (*)&#10;edit form course (show,edit tags ,update)" />
     <MESSAGE value="show course by tag&#10;(hubcourseController add TYPE_TAG)&#10;belongtoMany tag&#10;show TagOld&#10;edit form course" />
-    <option name="LAST_COMMIT_MESSAGE" value="show course by tag&#10;(hubcourseController add TYPE_TAG)&#10;belongtoMany tag&#10;show TagOld&#10;edit form course" />
+    <MESSAGE value="update database category add c_postion_1 &#10;show category theo nổi bật và position" />
+    <option name="LAST_COMMIT_MESSAGE" value="update database category add c_postion_1 &#10;show category theo nổi bật và position" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="292" key="#Composer" timestamp="1603628582271">
@@ -669,19 +688,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603630039301" />
-    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608015011893">
+    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609143791404">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1608015011893" />
+    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1609143791404" />
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1603695620049">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1603695620049" />
-    <state x="549" y="169" key="FileChooserDialogImpl" timestamp="1608807478709">
+    <state x="549" y="169" key="FileChooserDialogImpl" timestamp="1609069129844">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603700798100" />
-    <state x="549" y="169" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1608807478709" />
+    <state x="549" y="169" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1609069129844" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1606116814131">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -698,16 +717,16 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="604" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1607671163795" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1608989863666">
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1608999356283">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603976651077" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1608989863666" />
-    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1608988212672">
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1608999356283" />
+    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609142721197">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1603957922331" />
-    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1608988212672" />
+    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1609142721197" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603638299034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -721,11 +740,11 @@
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603955216936" />
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1608985396918" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1608998828301">
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1609145877654">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603975488859" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1608998828301" />
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1609145877654" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -744,6 +763,12 @@
           <url>file://$PROJECT_DIR$/Modules/Admin/Resources/views/pages/tag/index.blade.php</url>
           <line>2</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/assets/js/pages/home/home.js</url>
+          <line>6</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
