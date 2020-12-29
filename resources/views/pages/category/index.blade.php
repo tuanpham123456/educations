@@ -12,23 +12,15 @@
                <div class="box-25 mr20">
                    <section>
                        <div class="box-sidebar ">
-                           <h2 class="box-sidebar-title">Kỹ năng quản trị</h2>
+                           <h2 class="box-sidebar-title">{{ $category->c_name }}</h2>
                            <ul class="b-s-category">
-                               <li>
-                                   <a href=""><i class="fa fa-comments"></i> Khóa học combo</a>
-                               </li>
-                               <li>
-                                   <a href=""><i class="fa fa-comments"></i> Khóa học combo</a>
-                               </li>
-                               <li>
-                                   <a href=""><i class="fa fa-comments"></i> Khóa học combo</a>
-                               </li>
-                               <li>
-                                   <a href=""><i class="fa fa-comments"></i> Khóa học combo</a>
-                               </li>
-                               <li class="turn-back">
-                                   <a href=""><i class="fa fa-angle-left"></i>  Xem danh mục khác</a>
-                               </li>
+                               @foreach($categoryChild as $item)
+                                   <li>
+                                       <a href="{{ route('get.course.render',['slug' => $item->c_slug.'-c']) }}" title="{{ $item->c_name }}">
+                                           <i class="{{ $item->c_icon }}">
+                                           </i>{{ $item->c_name }}</a>
+                                   </li>
+                               @endforeach
                            </ul>
                        </div>
                    </section>
@@ -55,7 +47,7 @@
                </div>
                <div class="box-75 box-content">
                    <div class="results mb10 mt10">
-                       <b>20 </b>Khóa học <b>Con người</b>
+                       <b>20</b>Khóa học <b>Con người</b>
                    </div>
                    <div class="lists">
                        @forelse($courses as $item)

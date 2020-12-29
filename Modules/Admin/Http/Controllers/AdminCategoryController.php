@@ -21,7 +21,13 @@ class AdminCategoryController extends AdminController
     }
 
     public function create(){
-        return view ('admin::pages.category.create');
+        $categories  = Category::orderByDesc('c_sort')
+            ->get();
+        $viewData = [
+            'categories'    => $categories,
+
+        ];
+        return view ('admin::pages.category.create',$viewData);
     }
 
     public function store(AdminCategoryRequest $request){
@@ -46,8 +52,12 @@ class AdminCategoryController extends AdminController
 
     public function edit($id){
         $category       = Category::findOrFail($id);
+        // show c_parent_id
+        $categories  = Category::orderByDesc('c_sort')->get();
+
         $viewData   =[
-            'category'  => $category
+            'category'   => $category,
+            'categories' => $categories,
         ];
         return view ('admin::pages.category.update',$viewData);
     }

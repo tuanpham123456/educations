@@ -31,10 +31,12 @@
                     </div>
                     <div class="form-group">
                         <label class="required" for="exampleInputEmail1"> Parent <span>(*)</span></label>
-                        <select name="c_parent_id" class="form-control SlectBox SumoUnder"
-                                onclick="console.log($(this).val())" onchange="console.log('change is firing')" tabindex="-1">
+                        <select name="c_parent_id" class="form-control SlectBox SumoUnder" tabindex="-1">
                             <!--placeholder-->
                             <option title="ROOT" value="0">__ROOT__</option>
+                            @foreach($categories as $item)
+                                <option value="{{ $item->id }}" {{ ($category->c_parent_id ?? 0) == $item->id ? "selected" : ""  }}>{{ $item->c_name }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
