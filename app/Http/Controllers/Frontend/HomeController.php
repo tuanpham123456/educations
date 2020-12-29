@@ -55,6 +55,16 @@ class HomeController extends Controller
             ->get();
         // show đội ngũ giảng viên
         $teachers   = Teacher::orderByDesc('id')->get();
+
+        // package Meta Seo Laravel
+        \SEOMeta::setTitle('Kyan');
+        \SEOMeta::setDescription('Kyan');
+        \SEOMeta::setCanonical(\Request::url());
+        \OpenGraph::setDescription('Website sell course');
+        \OpenGraph::setTitle('Kyan');
+        \OpenGraph::setUrl(\Request::url());
+        \OpenGraph::addProperty('type', 'articles');
+
         $viewData   = [
             'tagsHot'           => $tagsHot,
             'coursesFree'       => $coursesFree,
