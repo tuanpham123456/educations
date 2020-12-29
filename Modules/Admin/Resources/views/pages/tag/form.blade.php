@@ -93,7 +93,26 @@
                             </div>
                         </label>
                     </div>
-
+                </div>
+            </div>
+            <div class="card  box-shadow-0">
+                <div class="card-body pt-3">
+                    <div class="form-group">
+                        <label class="" for="exampleInputEmail1"> Position
+                            <div class="form-group">
+                                <label class="box-checkbox"> Nổi bật trang chủ
+                                    <input type="checkbox" name="t_position_1" {{ ($tags->t_position_1 ?? 0) == 1 ? 'checked' : '' }} value="1">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="box-checkbox"> Nổi bật danh mục
+                                    <input type="checkbox" name="t_position_2" {{ ($tags->t_position_2 ?? 0) == 1 ? 'checked' : '' }} value="1">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="card  box-shadow-0">

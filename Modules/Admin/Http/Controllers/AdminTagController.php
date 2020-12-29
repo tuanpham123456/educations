@@ -32,8 +32,14 @@ class AdminTagController extends AdminController
     public function store(AdminTagRequest $request){
         $data                   = $request->except(['avatar','_token','save']);
         $data['created_at']     = Carbon::now();
+        $data['t_position_1']   = 0;
+        $data['t_position_2']   = 0;
+
         if(!$request->t_title_sxeo) $data['t_title_seo'] = $request->t_name;
         if(!$request->t_description_seo) $data['t_description_seo'] = $request->t_name;
+        if($request->t_position_1) $data['t_position_1'] = 1;
+        if($request->t_position_2) $data['t_position_2'] = 1;
+
         $tagId = Tag::insertGetId($data);
         if($tagId){
         //thêm thành công show toast
@@ -58,9 +64,13 @@ class AdminTagController extends AdminController
         $tags                   = Tag::findOrFail($id);
         $data                   = $request->except(['avatar','_token','save']);
         $data['updated_at']     = Carbon::now();
+        $data['t_position_1']   = 0;
+        $data['t_position_2']   = 0;
 
         if(!$request->t_title_seo) $data['t_title_seo'] = $request->t_name;
         if(!$request->t_description_seo) $data['t_description_seo'] = $request->t_name;
+        if($request->t_position_1) $data['t_position_1'] = 1;
+        if($request->t_position_2) $data['t_position_2'] = 1;
         RenderUrlSeoCourseService::init($request->t_slug,SeoEducation::TYPE_TAG,$id);
 
         $tags->fill($data)->save();

@@ -28,18 +28,11 @@
                        <div class="box-sidebar">
                            <h2 class="box-sidebar-title">Chủ đề đang hot</h2>
                            <ul class="b-s-tags">
-                               <li>
-                                   <a href="">Bán hàng</a>
-                               </li>
-                               <li>
-                                   <a href="">Tiếng nhật</a>
-                               </li>
-                               <li>
-                                   <a href="">Tiếng Anh</a>
-                               </li>
-                               <li>
-                                   <a href="">Bán hàng Đa Cấp</a>
-                               </li>
+                               @foreach($tags as $item)
+                                   <li>
+                                       <a href="{{ route('get.course.render',['slug' => $item->t_slug.'-t']) }}" target="_blank">{{ $item->t_name }}</a>
+                                   </li>
+                               @endforeach
                                <div style="clear: both"></div>
                            </ul>
                        </div>

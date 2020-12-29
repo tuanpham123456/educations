@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Education\Course;
+use App\Models\Education\Tag;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -20,10 +21,16 @@ class CategoryController extends Controller
             ->where('c_status',Course::STATUS_DEFAULT)
             ->orderByDesc('id')
             ->paginate(12);
+        // show từ khóa nổi bật trong category
+        $tags    = Tag::where([
+           't_status'  => 1,
+            't_position_2' => 1,
+        ])->get();
         $viewData  = [
             'courses'   => $courses,
             'category'  => $category,
-            'categoryChild' => $categoryChild
+            'categoryChild' => $categoryChild,
+            'tags'       => $tags,
         ];
         return view ('pages.category.index',$viewData ?? []);
     }
