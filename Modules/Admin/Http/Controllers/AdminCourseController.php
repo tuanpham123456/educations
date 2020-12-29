@@ -17,10 +17,10 @@ class AdminCourseController extends AdminController
 {
     public function index(){
         $courses     = Course::orderByDesc('id')->paginate(10);
-        $tags        = Tag::all();
-        dd($tags);
+//        $tags        = Tag::all();
         $viewData    = [
-            'courses'   => $courses
+            'courses'   => $courses,
+//            'tags'      => $tags,
         ];
         return view ('admin::pages.course.index',$viewData);
     }
