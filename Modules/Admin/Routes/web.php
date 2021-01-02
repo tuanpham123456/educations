@@ -74,3 +74,7 @@ Route::group(['prefix' => 'admin'], function () {
     });
 });
 
+ Route::group(['namespace' => 'Auth','prefix' => 'auth'], function () {
+     Route::get('login','AdminLoginController@login')->name('get.admin.login');
+     ROute::post('login','AdminLoginController@postLogin');
+ });

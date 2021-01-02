@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Log;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +14,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        try {
+            \DB::table('admins')->insert([
+                'name'  => 'TuanPham-0403',
+                'email' => 'tuanpham4398@gmail.com',
+                'phone' => '0932505372',
+                'password' => \Hash::make('04031998'),
+            ]);
+        }catch (\Exception $exception){
+            Log::error('[Seeder]',$exception->getMessage());
+        }
     }
 }

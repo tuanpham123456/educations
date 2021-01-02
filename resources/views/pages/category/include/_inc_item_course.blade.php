@@ -2,7 +2,7 @@
     <div class="box-course" style="margin: 10px">
         <div class="avatar">
             <div class="img">
-                <a href="">
+                <a href="{{ route('get.course.render',['slug' => $item->c_slug.'-cr']) }}">
                     <img src="{{ asset(pare_url_file($item->c_avatar)) }}" alt="">
                 </a>
                 <div class="img_badget">
