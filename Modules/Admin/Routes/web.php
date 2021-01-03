@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin','middleware' => 'checkLoginAdmin'], function () {
     Route::get('/','AdminDashboardController@index')->name('get_admin.dashboard');
 
     Route::group(['prefix' => 'tag'],function (){
@@ -76,5 +76,7 @@ Route::group(['prefix' => 'admin'], function () {
 
  Route::group(['namespace' => 'Auth','prefix' => 'auth'], function () {
      Route::get('login','AdminLoginController@login')->name('get.admin.login');
+     Route::get('logout','AdminLoginController@logout')->name('get.admin.logout');
+
      ROute::post('login','AdminLoginController@postLogin');
  });

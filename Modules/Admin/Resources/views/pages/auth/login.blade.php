@@ -57,13 +57,19 @@
                                     <div class="main-signup-header">
                                         <h2>Welcome back!</h2>
                                         <h5 class="font-weight-semibold mb-4">Please sign in to continue.</h5>
-                                        <form action="signin#" method="post">
+                                        <form action="" method="post">
                                             @csrf
                                             <div class="form-group">
-                                                <label>Email</label> <input class="form-control" placeholder="Enter your email" type="text" name="email">
+                                                <label>Email</label> <input class="form-control" placeholder="Enter your email" value="{{ old('email') }}" type="text" name="email">
+                                                @if($errors->first('email'))
+                                                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                                                @endif
                                             </div>
                                             <div class="form-group">
-                                                <label>Password</label> <input class="form-control" placeholder="Enter your password" type="password" name="password">
+                                                <label>Password</label> <input class="form-control" placeholder="Enter your password" value="{{ old('password') }}" type="password" name="password">
+                                                @if($errors->first('password'))
+                                                    <span class="text-danger">{{ $errors->first('password') }}</span>
+                                                @endif
                                             </div>
                                             <button class="btn btn-main-primary btn-block">Sign In</button>
 
