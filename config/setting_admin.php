@@ -36,9 +36,27 @@ return[
                     'name'  => 'Slide',
                     'route' => 'get_admin.slide.index'
                 ],
-
             ]
         ],
+        [
+            'name'  => 'Admin',
+            'class-icon'  => 'la la-cogs',
+            'sub'   => [
+                [
+                    'name'  => 'Permission',
+                    'route' => 'get_admin.permission.index'
+                ],
+                [
+                    'name'  => 'role',
+                    'route' => 'get_admin.permission.index'
+                ],
+                [
+                    'name'  => 'Quản trị viên',
+                    'route' => 'get_admin.permission.index'
+                ],
+            ]
+        ],
+
 
     ]
 ];

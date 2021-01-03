@@ -17,6 +17,7 @@ class AdminLoginController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (\Auth::guard('admins')->attempt($credentials)) {
+            $request->session()->regenerate();
             return redirect()->route('get_admin.dashboard');
         }
         return redirect()->back();

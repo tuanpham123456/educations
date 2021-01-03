@@ -15,14 +15,14 @@ Route::group(['prefix' => 'admin','middleware' => 'checkLoginAdmin'], function (
     Route::get('/','AdminDashboardController@index')->name('get_admin.dashboard');
 
     Route::group(['prefix' => 'tag'],function (){
-        Route::get('/','AdminTagController@index')->name('get_admin.tag.index');
-        Route::get('create','AdminTagController@create')->name('get_admin.tag.create');
+        Route::get('/','AdminTagController@index')->name('get_admin.tag.index')->middleware('permission:tag_index|full');
+        Route::get('create','AdminTagController@create')->name('get_admin.tag.create')->middleware('permission:tag_add|full');
         Route::post('create','AdminTagController@store');
 
-        Route::get('update/{id}','AdminTagController@edit')->name('get_admin.tag.edit');
+        Route::get('update/{id}','AdminTagController@edit')->name('get_admin.tag.edit')->middleware('permission:tag_edit|full');
         Route::post('update/{id}','AdminTagController@update');
 
-        Route::get('delete/{id}','AdminTagController@delete')->name('get_admin.tag.delete');
+        Route::get('delete/{id}','AdminTagController@delete')->name('get_admin.tag.delete')->middleware('permission:tag_delete|full');
 
     });
     Route::group(['prefix' => 'category'],function (){
@@ -72,11 +72,14 @@ Route::group(['prefix' => 'admin','middleware' => 'checkLoginAdmin'], function (
     Route::prefix('ajax')->namespace('Ajax')->group(function (){
         Route::post('/upload/image','AdminAjaxUploadImageController@processUpload')->name('post_ajax_admin.uploads');
     });
+
 });
 
  Route::group(['namespace' => 'Auth','prefix' => 'auth'], function () {
      Route::get('login','AdminLoginController@login')->name('get.admin.login');
      Route::get('logout','AdminLoginController@logout')->name('get.admin.logout');
-
      ROute::post('login','AdminLoginController@postLogin');
  });
+
+
+ require_once 'route_acl.php';
