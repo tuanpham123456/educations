@@ -5,8 +5,12 @@ namespace Modules\Admin\Http\Controllers\Acl;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Admin\Http\Controllers\AdminController;
+use Modules\Admin\Http\Requests\AdminRoleRequest;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
-class AdminRoleController extends Controller
+class AdminRoleController extends AdminController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +18,9 @@ class AdminRoleController extends Controller
      */
     public function index()
     {
-        return view('admin::index');
+        $roles  = Role::all();
+
+        return view('admin::pages.acl.role.index',compact('roles'));
     }
 
     /**
@@ -23,7 +29,9 @@ class AdminRoleController extends Controller
      */
     public function create()
     {
-        return view('admin::create');
+        $permission = Permission::oderBy('group_permission','asc')->get();
+
+        return view('admin::pages.acl.role.create',compact('permission'));
     }
 
     /**
@@ -31,9 +39,13 @@ class AdminRoleController extends Controller
      * @param Request $request
      * @return Renderable
      */
-    public function store(Request $request)
+    public function store(AdminRoleRequest $request)
     {
-        //
+        $data  = $request->except('_token','save');
+        $data['guard_name'] = 'admins';
+        Role::create($data);
+        $this->showMessagesSuccess();
+        return redirect()->back();
     }
 
     /**
@@ -41,11 +53,6 @@ class AdminRoleController extends Controller
      * @param int $id
      * @return Renderable
      */
-    public function show($id)
-    {
-        return view('admin::show');
-    }
-
     /**
      * Show the form for editing the specified resource.
      * @param int $id
@@ -53,7 +60,14 @@ class AdminRoleController extends Controller
      */
     public function edit($id)
     {
-        return view('admin::edit');
+        $role          = Role::findOrFail($id);
+        $permission = Permission::oderBy('group_permission','asc')->get();
+
+        $viewData = [
+            'role'        => $role,
+            'permission'  => $permission,
+        ];
+        return view('admin::pages.acl.role.update',$viewData);
     }
 
     /**
@@ -64,7 +78,11 @@ class AdminRoleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data  = $request->except('_token','save');
+        $data['guard_name'] = 'admins';
+        Role::find($id)->update($data);
+        $this->showMessagesSuccess('Cập nhật thành công');
+        return redirect()->route('get_admin.role.index');
     }
 
     /**
@@ -72,8 +90,14 @@ class AdminRoleController extends Controller
      * @param int $id
      * @return Renderable
      */
-    public function destroy($id)
+    public function delete(Request $request,$id)
     {
-        //
+        if($request->ajax()){
+            $roles = Role::findOrFail($id)->delete();
+            return response()->json([
+                'status'      => 200,
+                'message'   => 'Xóa dữ liệu thành công'
+            ]);
+        }
     }
 }

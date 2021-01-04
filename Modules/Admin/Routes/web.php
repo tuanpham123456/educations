@@ -16,7 +16,7 @@ Route::group(['prefix' => 'admin','middleware' => 'checkLoginAdmin'], function (
 
     Route::group(['prefix' => 'tag'],function (){
         Route::get('/','AdminTagController@index')->name('get_admin.tag.index')->middleware('permission:tag_index|full');
-        Route::get('create','AdminTagController@create')->name('get_admin.tag.create')->middleware('permission:tag_add|full');
+        Route::get('create','AdminTagController@create')->name('get_admin.tag.create')->middleware('permission:tag_create|full');
         Route::post('create','AdminTagController@store');
 
         Route::get('update/{id}','AdminTagController@edit')->name('get_admin.tag.edit')->middleware('permission:tag_edit|full');
@@ -26,47 +26,47 @@ Route::group(['prefix' => 'admin','middleware' => 'checkLoginAdmin'], function (
 
     });
     Route::group(['prefix' => 'category'],function (){
-        Route::get('/','AdminCategoryController@index')->name('get_admin.category.index');
-        Route::get('create','AdminCategoryController@create')->name('get_admin.category.create');
+        Route::get('/','AdminCategoryController@index')->name('get_admin.category.index')->middleware('permission:category_index|full');;
+        Route::get('create','AdminCategoryController@create')->name('get_admin.category.create')->middleware('permission:category_create|full');;
         Route::post('create','AdminCategoryController@store');
 
-        Route::get('update/{id}','AdminCategoryController@edit')->name('get_admin.category.edit');
+        Route::get('update/{id}','AdminCategoryController@edit')->name('get_admin.category.edit')->middleware('permission:category_edit|full');;
         Route::post('update/{id}','AdminCategoryController@update');
 
-        Route::get('delete/{id}','AdminCategoryController@delete')->name('get_admin.category.delete');
+        Route::get('delete/{id}','AdminCategoryController@delete')->name('get_admin.category.delete')->middleware('permission:category_delete|full');;
 
     });
     Route::group(['prefix' => 'teacher'],function (){
-        Route::get('/','AdminTeacherController@index')->name('get_admin.teacher.index');
-        Route::get('create','AdminTeacherController@create')->name('get_admin.teacher.create');
+        Route::get('/','AdminTeacherController@index')->name('get_admin.teacher.index')->middleware('permission:teacher_index|full');;
+        Route::get('create','AdminTeacherController@create')->name('get_admin.teacher.create')->middleware('permission:teacher_create|full');;
         Route::post('create','AdminTeacherController@store');
 
-        Route::get('update/{id}','AdminTeacherController@edit')->name('get_admin.teacher.edit');
+        Route::get('update/{id}','AdminTeacherController@edit')->name('get_admin.teacher.edit')->middleware('permission:teacher_edit|full');;
         Route::post('update/{id}','AdminTeacherController@update');
 
-        Route::get('delete/{id}','AdminTeacherController@delete')->name('get_admin.teacher.delete');
+        Route::get('delete/{id}','AdminTeacherController@delete')->name('get_admin.teacher.delete')->middleware('permission:teacher_delete|full');;
 
     });
     Route::group(['prefix' => 'course'],function (){
-        Route::get('/','AdminCourseController@index')->name('get_admin.course.index');
-        Route::get('create','AdminCourseController@create')->name('get_admin.course.create');
+        Route::get('/','AdminCourseController@index')->name('get_admin.course.index')->middleware('permission:course_index|full');;
+        Route::get('create','AdminCourseController@create')->name('get_admin.course.create')->middleware('permission:course_create|full');;
         Route::post('create','AdminCourseController@store');
 
-        Route::get('update/{id}','AdminCourseController@edit')->name('get_admin.course.edit');
+        Route::get('update/{id}','AdminCourseController@edit')->name('get_admin.course.edit')->middleware('permission:course_edit|full');;
         Route::post('update/{id}','AdminCourseController@update');
 
-        Route::get('delete/{id}','AdminCourseController@delete')->name('get_admin.course.delete');
+        Route::get('delete/{id}','AdminCourseController@delete')->name('get_admin.course.delete')->middleware('permission:course_delete|full');;
 
     });
     Route::group(['prefix' => 'slide'],function (){
-        Route::get('/','AdminSlideController@index')->name('get_admin.slide.index');
-        Route::get('create','AdminSlideController@create')->name('get_admin.slide.create');
+        Route::get('/','AdminSlideController@index')->name('get_admin.slide.index')->middleware('permission:slide_index|full');;
+        Route::get('create','AdminSlideController@create')->name('get_admin.slide.create')->middleware('permission:slide_create|full');;
         Route::post('create','AdminSlideController@store');
 
-        Route::get('update/{id}','AdminSlideController@edit')->name('get_admin.slide.edit');
+        Route::get('update/{id}','AdminSlideController@edit')->name('get_admin.slide.edit')->middleware('permission:slide_edit|full');;
         Route::post('update/{id}','AdminSlideController@update');
 
-        Route::get('delete/{id}','AdminSlideController@delete')->name('get_admin.slide.delete');
+        Route::get('delete/{id}','AdminSlideController@delete')->name('get_admin.slide.delete')->middleware('permission:slide_delete|full');;
 
     });
     Route::prefix('ajax')->namespace('Ajax')->group(function (){

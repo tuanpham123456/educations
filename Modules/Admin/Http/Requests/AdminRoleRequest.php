@@ -14,7 +14,14 @@ class AdminRoleRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'    => 'required|unique:roles,name'.$this->id,
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'name.required' => 'Dữ liệu không tồn tại',
+            'name.unique'   => 'Dữ liệu đã tồn tại'
         ];
     }
 

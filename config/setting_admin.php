@@ -47,8 +47,8 @@ return[
                     'route' => 'get_admin.permission.index'
                 ],
                 [
-                    'name'  => 'role',
-                    'route' => 'get_admin.permission.index'
+                    'name'  => 'Role',
+                    'route' => 'get_admin.role.index'
                 ],
                 [
                     'name'  => 'Quản trị viên',
