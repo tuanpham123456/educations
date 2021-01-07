@@ -29,9 +29,18 @@ class AdminRoleController extends AdminController
      */
     public function create()
     {
-        $permission = Permission::oderBy('group_permission','asc')->get();
+        $permissions = Permission::orderBy('group_permission','asc')->get();
+        $permissions = $this->arrayGroupPermission($permissions);
+        $groups         = $this->getGroupPermission();
+        // tạo mảng trống để khỏi check
+        $permissionActive = [];
+        $viewData   = [
+            'permissions' => $permissions,
+            'groups'      => $groups,
+            'permissionActive' => $permissionActive
 
-        return view('admin::pages.acl.role.create',compact('permission'));
+        ];
+        return view('admin::pages.acl.role.create',$viewData);
     }
 
     /**
@@ -41,9 +50,16 @@ class AdminRoleController extends AdminController
      */
     public function store(AdminRoleRequest $request)
     {
-        $data  = $request->except('_token','save');
+        $data  = $request->except('_token','save','permission');
         $data['guard_name'] = 'admins';
-        Role::create($data);
+        $role  = Role::create($data);
+
+        // check nếu chưa lưu permission vào role
+        if ($permissions = $request->permission){
+            foreach ($permissions as $permission)
+                // dùng hàm có sẵn của package
+                $role->givePermissionTo($permission);
+        }
         $this->showMessagesSuccess();
         return redirect()->back();
     }
@@ -61,11 +77,18 @@ class AdminRoleController extends AdminController
     public function edit($id)
     {
         $role          = Role::findOrFail($id);
-        $permission = Permission::oderBy('group_permission','asc')->get();
+        $permissions    = Permission::orderBy('group_permission','asc')->get();
+        $permissions = $this->arrayGroupPermission($permissions);
+        $groups         = $this->getGroupPermission();
+
+        // show permission để selected
+        $permissionActive   = $role->permissions()->pluck('id')->toArray();
 
         $viewData = [
             'role'        => $role,
-            'permission'  => $permission,
+            'permissions'  => $permissions,
+            'groups'      => $groups,
+            'permissionActive'  => $permissionActive,
         ];
         return view('admin::pages.acl.role.update',$viewData);
     }
@@ -80,9 +103,24 @@ class AdminRoleController extends AdminController
     {
         $data  = $request->except('_token','save');
         $data['guard_name'] = 'admins';
-        Role::find($id)->update($data);
+        $role   = Role::find($id);
+        $role->fill($data)->update();
+
+        // nếu xóa revokePermissionTo hàm của package
+        $allPermission  = Permission::all();
+        foreach ($allPermission as $permission)
+            $role->revokePermissionTo($permission);
+
+        // check nếu chưa lưu permission vào role
+        if ($permissions = $request->permission){
+            foreach ($permissions as $permission)
+                // dùng hàm có sẵn của package
+                $role->givePermissionTo($permission);
+        }
+
         $this->showMessagesSuccess('Cập nhật thành công');
         return redirect()->route('get_admin.role.index');
+
     }
 
     /**
@@ -99,5 +137,22 @@ class AdminRoleController extends AdminController
                 'message'   => 'Xóa dữ liệu thành công'
             ]);
         }
+    }
+
+    public function getGroupPermission(){
+        // gọi từ package permission trong config tạo mảng data group
+        return config('permission.group');
+    }
+
+    protected function arrayGroupPermission($permissions){
+        // 1 group_permission có nhiều permission chia theo nhóm group
+
+        $data = [];
+
+        foreach ($permissions as $permission){
+            $data[$permission->group_permission][] = $permission ;
+        }
+        return $data;
+
     }
 }

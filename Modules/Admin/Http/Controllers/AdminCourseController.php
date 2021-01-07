@@ -20,7 +20,7 @@ class AdminCourseController extends AdminController
 //        $tags        = Tag::all();
         $viewData    = [
             'courses'   => $courses,
-//            'tags'      => $tags,
+//           'tags'      => $tags,
         ];
         return view ('admin::pages.course.index',$viewData);
     }

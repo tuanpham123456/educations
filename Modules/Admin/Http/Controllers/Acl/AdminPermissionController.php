@@ -105,4 +105,5 @@ class AdminPermissionController extends AdminController
         // gọi từ package permission trong config tạo mảng data group
         return config('permission.group');
     }
+
 }

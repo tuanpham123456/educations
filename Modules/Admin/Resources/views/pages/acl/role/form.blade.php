@@ -1,7 +1,7 @@
 <form class="form-horizontal" autocomplete="off" method="post">
     @csrf
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-10">
             <div class="card  box-shadow-0">
                 <div class="card-body pt-3">
                     <div class="form-group">
@@ -18,12 +18,31 @@
                     <div class="form-group">
                         <label> Description <span>(*)</span></label>
                         <input type="text" class="form-control keypress-count" value="{{ old('description',$role->description ?? '')}}" name="description"  placeholder="">
-                    </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="card  box-shadow-0">
+                <div class="card-body pt-3">
+                       @foreach($permissions as $key => $groupPermission)
+                        <div class="row" style="margin-bottom: 1rem;border-bottom: 1px solid #dedede">
+                            <div class="col-sm-12" >
+                                <h5>{{ $groups[$key] }}</h5>
+                            </div>
+                           @foreach($groupPermission as $permission)
+                          <div class="col-sm-3">
+                              <label class="box-checkbox">{{ $permission->description }}
+                                  <input type="checkbox" name="permission[]" {{ in_array($permission->id,$permissionActive) ? "checked" : ""  }} value="{{ $permission->id }}">
+                                  <span class="checkmark"></span>
+                              </label>
+                          </div>
+                           @endforeach
+                        </div>
+                    @endforeach
                 </div>
             </div>
 
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-2">
             <div class="card  box-shadow-0">
                 <div class="card-body pt-3">
                     <div class="form-group">
@@ -31,10 +50,6 @@
                         <div class="">
                             <button class="btn btn-info" name="save" value="save">
                                 <i class="la la-save"></i> Save
-                            </button>
-
-                            <button class="btn btn-success" name="save" value="edit">
-                                <i class="la la-check-circle"></i> Save & Edit
                             </button>
                         </div>
                     </div>
