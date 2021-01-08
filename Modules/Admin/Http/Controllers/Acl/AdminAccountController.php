@@ -2,9 +2,12 @@
 
 namespace Modules\Admin\Http\Controllers\Acl;
 
+use App\Models\System\Admin;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Admin\Http\Requests\AdminAccountRequest;
+use Spatie\Permission\Models\Role;
 
 class AdminAccountController extends Controller
 {
@@ -14,7 +17,11 @@ class AdminAccountController extends Controller
      */
     public function index()
     {
-        return view('admin::index');
+        $admins = Admin::all();
+        $viewData = [
+            'admins'    => $admins
+        ];
+        return view('admin::pages.acl.admin.index',$viewData);
     }
 
     /**
@@ -23,7 +30,12 @@ class AdminAccountController extends Controller
      */
     public function create()
     {
-        return view('admin::create');
+        // show role
+        $roles  = Role::all();
+        $viewData = [
+            'roles' => $roles,
+        ];
+        return view('admin::pages.acl.admin.create',$viewData);
     }
 
     /**
@@ -31,9 +43,19 @@ class AdminAccountController extends Controller
      * @param Request $request
      * @return Renderable
      */
-    public function store(Request $request)
+    public function store(AdminAccountRequest $request)
     {
-        //
+        $data   = $request->except('_token','roles');
+        $data['password']   = bcrypt($request->password);
+        $admins   = Admin::create($data);
+
+        // kiểm tra nếu chưa thêm roles vào bảng thì lưu (dùng hàm của package)
+        if($roles = $request->roles)
+        {
+            foreach ($roles as $item)
+                $admins->syncRoles($roles);
+        }
+        return redirect()->back();
     }
 
     /**
@@ -41,10 +63,6 @@ class AdminAccountController extends Controller
      * @param int $id
      * @return Renderable
      */
-    public function show($id)
-    {
-        return view('admin::show');
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -53,7 +71,16 @@ class AdminAccountController extends Controller
      */
     public function edit($id)
     {
-        return view('admin::edit');
+        $roles  = Role::all();
+        $admins  = Admin::find($id);
+        $rolesActive   = $admins->roles()->pluck('id')->toArray();
+        $viewData = [
+            'roles'          => $roles,
+            'admins'          => $admins,
+            'rolesActive'    => $rolesActive,
+        ];
+
+        return view('admin::pages.acl.admin.update',$viewData ?? []);
     }
 
     /**
@@ -64,7 +91,17 @@ class AdminAccountController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data   = $request->except('_token','roles','password');
+        if ($request->password) $data['password']  = bcrypt($request->password);
+        $admins = Admin::find($id);
+
+        $roles  = $request->roles;
+        if ($roles){
+            $admins->roles()->sync($roles);
+        }else{
+            $admins->roles()->detach();
+        }
+        return redirect()->back();
     }
 
     /**

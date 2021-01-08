@@ -23,11 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87263d7a-f976-42ff-bb3e-ac35780a9209" name="Default Changelist" comment="mix backend admin">
+      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/acl/admin/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/acl/admin/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/acl/admin/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/acl/admin/update.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/PermissionMiddleware.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/Acl/AdminPermissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/Acl/AdminPermissionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/Acl/AdminRoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/Acl/AdminRoleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminCourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminCourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/acl/role/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/acl/role/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/Acl/AdminAccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/Acl/AdminAccountController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Requests/AdminAccountRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Requests/AdminAccountRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/acl/permission/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/acl/permission/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Routes/route_acl.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Routes/route_acl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/System/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/System/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/setting_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/setting_admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,25 +201,25 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="VAR" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/acl/role" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/acl/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\educations\Modules\Admin\Resources\views\pages\acl\role" />
-      <recent name="C:\xampp\htdocs\educations\Modules\Admin\Resources\views\pages\acl\permission" />
-      <recent name="C:\xampp\htdocs\educations\resources\views\pages\tag\include" />
-      <recent name="C:\xampp\htdocs\educations\resources\views\pages\category\include" />
-      <recent name="C:\xampp\htdocs\educations\resources\views\pages\tag" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\educations\resources\assets\scss\components\loading" />
       <recent name="C:\xampp\htdocs\educations\resources\views\pages\teacher\include" />
       <recent name="C:\xampp\htdocs\educations\public\images" />
       <recent name="C:\xampp\htdocs\educations\resources\assets\scss\components" />
       <recent name="C:\xampp\htdocs\educations\resources\assets\valex\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\educations\Modules\Admin\Resources\views\pages\acl\admin" />
+      <recent name="C:\xampp\htdocs\educations\Modules\Admin\Resources\views\pages\acl\role" />
+      <recent name="C:\xampp\htdocs\educations\Modules\Admin\Resources\views\pages\acl\permission" />
+      <recent name="C:\xampp\htdocs\educations\resources\views\pages\tag\include" />
+      <recent name="C:\xampp\htdocs\educations\resources\views\pages\category\include" />
     </key>
   </component>
   <component name="RunManager">
@@ -359,7 +367,9 @@
       <workItem from="1609725840382" duration="35000" />
       <workItem from="1609759848327" duration="4656000" />
       <workItem from="1609764859150" duration="146000" />
-      <workItem from="1610020676642" duration="4889000" />
+      <workItem from="1610020676642" duration="5101000" />
+      <workItem from="1610065558570" duration="2109000" />
+      <workItem from="1610086836134" duration="9809000" />
     </task>
     <task id="LOCAL-00001" summary="Css item course">
       <created>1603634294026</created>
@@ -683,7 +693,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609764458923</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="role has permission">
+      <created>1610025749490</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1610025749490</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -702,7 +719,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* render slug (category,course,tag) theo id&#10;Create Serviec/Seo/RenderUrlSeoCourseService" />
     <MESSAGE value="fix RenderUrlSeoCourseService&#10;create HubCourseController render url course not all&#10;edit route" />
     <MESSAGE value="show courefree 0đ" />
     <MESSAGE value="show view course" />
@@ -727,7 +743,8 @@
     <MESSAGE value="done Login Admin&#10;- add function check data user ( guest.php)&#10;- add admin in config/auth.php&#10;- edit Kernel.php&#10;- create route logout admin" />
     <MESSAGE value="* Permission &#10;- use package Permission&#10;- add class Permission in app.php&#10;- route_acl.php&#10;- add,edit,update,delete (Permission)" />
     <MESSAGE value="Role" />
-    <option name="LAST_COMMIT_MESSAGE" value="Role" />
+    <MESSAGE value="role has permission" />
+    <option name="LAST_COMMIT_MESSAGE" value="role has permission" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="292" key="#Composer" timestamp="1603628582271">
@@ -763,10 +780,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603630039301" />
-    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609764216271">
+    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610095612438">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1609764216271" />
+    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1610095612438" />
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1603695620049">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -784,24 +801,24 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="349" y="160" key="IDE.errors.dialog/0.0.1536.834@0.0.1536.834" timestamp="1608023453576" />
-    <state x="555" y="140" key="NewPhpClassDialog" timestamp="1606917029513">
+    <state x="555" y="140" key="NewPhpClassDialog" timestamp="1610095584452">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="555" y="140" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1606917029513" />
-    <state x="604" y="340" key="NewPhpFileDialog" timestamp="1607671163795">
+    <state x="555" y="140" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1610095584452" />
+    <state x="604" y="340" key="NewPhpFileDialog" timestamp="1610095531990">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="604" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1607671163795" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1609764462403">
+    <state x="604" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1610095531990" />
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1610025754315">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603976651077" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1609764462403" />
-    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609662798675">
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1610025754315" />
+    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610097208726">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1603957922331" />
-    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1609662798675" />
+    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1610097208726" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603638299034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -815,11 +832,11 @@
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603955216936" />
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1609764190553" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1610024269266">
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1610096440940">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603975488859" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1610024269266" />
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1610096440940" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

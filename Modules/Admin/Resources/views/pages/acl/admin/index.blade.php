@@ -5,13 +5,13 @@
             <div class="breadcrumb-header justify-content-between">
                 <div class="my-auto">
                     <div class="d-flex">
-                        <h4 class="content-title mb-0 my-auto">Permission</h4>
+                        <h4 class="content-title mb-0 my-auto">Admin</h4>
                         <span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Empty</span>
                     </div>
                 </div>
                 <div class="d-flex my-xl-auto right-content">
                     <div class="pr-1 mb-3 mb-xl-0">
-                        <a href="{{ route('get_admin.permission.create') }}"class="btn btn-info  mr-2">Thêm mới <i class="la la-plus-circle"></i></a>
+                        <a href="{{ route('get_admin.account.create') }}"class="btn btn-info  mr-2">Thêm mới <i class="la la-plus-circle"></i></a>
                     </div>
                 </div>
             </div>
@@ -28,27 +28,28 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Guard name</th>
-                                        <th>Description</th>
-                                        <th>Status</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Roles</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
-                                    @forelse($permission as $item)
+                                    @forelse($admins ?? '' as $item)
                                     <tbody>
                                     <tr>
                                         <th scope="row">{{$item->id}}</th>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->guard_name }}</td>
-                                        <td>{{ $item->description }}</td>
-
-                                        <td>{{ $item->created_at }}</td>
+                                        <td>{{ $item->email }}</td>
+                                        <td>{{ $item->phone }}</td>
                                         <td>
-                                            <a href="{{ route('get_admin.permission.edit',$item->id) }}" class="btn btn-xs btn-info"><i class="la la-edit"></i></a>
-                                            <a href="{{ route('get_admin.permission.delete',$item->id) }}" class="btn btn-xs js-delete btn-danger "><i class="la la-trash"></i></a>
+                                            <span class="badge badge-info">{{ $item->roles()->pluck('name')->implode(',') ?? '' }}</span>
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('get_admin.account.edit',$item->id) }}" class="btn btn-xs btn-info"><i class="la la-edit"></i></a>
+                                            <a href="{{ route('get_admin.account.delete',$item->id) }}" class="btn btn-xs js-delete btn-danger "><i class="la la-trash"></i></a>
                                         </td>
                                     </tr>
-                                        @empty
+                                    @empty
                                         <p>Dữ liệu chưa được cập nhật</p>
                                         @endforelse
                                     </tbody>

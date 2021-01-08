@@ -52,7 +52,7 @@ return[
                 ],
                 [
                     'name'  => 'Quản trị viên',
-                    'route' => 'get_admin.permission.index'
+                    'route' => 'get_admin.account.index'
                 ],
             ]
         ],
