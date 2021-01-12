@@ -6,6 +6,9 @@ use App\Http\Controllers\Frontend\CategoryController;
 use App\Http\Controllers\Frontend\HubCourseController;
 use App\Http\Controllers\Frontend\TeacherController;
 use App\Http\Controllers\Frontend\Ajax\AjaxHomeController;
+use App\Http\Controllers\Frontend\LoginController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +21,8 @@ use App\Http\Controllers\Frontend\Ajax\AjaxHomeController;
 |
 */
 Route::group(['namespace' => 'Frontend'],function (){
-    Route::get('',[HomeController::class,'index']);
+    Route::post('/dang-nhap',[LoginController::class,'index'])->name('get_login');
+    Route::get('',[HomeController::class,'index'])->name('get.home');
     // render danh mục sang HubCourseController
     Route::get('/khoa-hoc/{slug?}',[HubCourseController::class,'render'])->name('get.course.render');
     Route::get('/tat-ca-khoa-hoc',[CategoryController::class,'index'])->name('get.category.all');

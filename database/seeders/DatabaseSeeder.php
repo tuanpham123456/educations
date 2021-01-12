@@ -24,5 +24,15 @@ class DatabaseSeeder extends Seeder
         }catch (\Exception $exception){
             Log::error('[Seeder]',$exception->getMessage());
         }
+
+        try {
+            \DB::table('users')->insert([
+                'name'  => 'tuanpham0403',
+                'email' => 'tuanpham0403@gmail.com',
+                'password' => \Hash::make('04031998'),
+            ]);
+        }catch (\Exception $exception){
+            Log::error('[Seeder User]',$exception->getMessage());
+        }
     }
 }

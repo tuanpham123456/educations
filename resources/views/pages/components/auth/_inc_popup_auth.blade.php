@@ -1,4 +1,4 @@
-<form  class="modal modal-customer modal-auth js-popup-auth">
+<div class="modal modal-customer modal-auth js-popup-auth">
     <div class="box">
         <div class="box-50 auth-left flex">
             <div class="inner">
@@ -15,14 +15,15 @@
                     <a href="" class="google"><i class="fa fa-google"></i> Google</a>
                 </div>
                 <p class="mb10">- Hoặc đăng nhập bằng tài khoản Kyna -</p>
-                <form action="">
+                <form action="{{ route('get_login') }}" method="POST">
+                    @csrf
                     <div class="form-group">
                         <span class="icon icon-mail"></span>
-                        <input type="text" class="form-control" placeholder="Email của bạn ...">
+                        <input type="text" class="form-control" name="email" placeholder="Email của bạn ...">
                     </div>
                     <div class="form-group">
                         <span class="icon icon-lock"></span>
-                        <input type="password" class="form-control" placeholder="Mật khẩu">
+                        <input type="password" class="form-control" name="password" placeholder="Mật khẩu">
                         <div class="password-show js-show-password"><i class="fa fa-eye"></i></div>
                     </div>
                     <div class="remember-login flex flex-jc-sb">
@@ -39,4 +40,4 @@
             </div>
         </div>
     </div>
-</form>
+</div>

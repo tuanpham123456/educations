@@ -69,6 +69,18 @@ Route::group(['prefix' => 'admin','middleware' => 'checkLoginAdmin'], function (
         Route::get('delete/{id}','AdminSlideController@delete')->name('get_admin.slide.delete')->middleware('permission:slide_delete|full');;
 
     });
+
+    Route::group(['prefix' => 'user'],function (){
+        Route::get('/','AdminUserController@index')->name('get_admin.user.index')->middleware('permission:user_index|full');;
+        Route::get('create','AdminUserController@create')->name('get_admin.user.create')->middleware('permission:user_create|full');;
+        Route::post('create','AdminUserController@store');
+
+        Route::get('update/{id}','AdminUserController@edit')->name('get_admin.user.edit')->middleware('permission:user_edit|full');;
+        Route::post('update/{id}','AdminUserController@update');
+
+        Route::get('delete/{id}','AdminUserController@delete')->name('get_admin.user.delete')->middleware('permission:user_delete|full');;
+
+    });
     Route::prefix('ajax')->namespace('Ajax')->group(function (){
         Route::post('/upload/image','AdminAjaxUploadImageController@processUpload')->name('post_ajax_admin.uploads');
     });

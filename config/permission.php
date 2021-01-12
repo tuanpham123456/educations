@@ -151,6 +151,7 @@ return [
         7 => 'Role',
         8 => 'Admin',
         9 => 'Sale',
+        10=> 'User',
     ]
 
 ];

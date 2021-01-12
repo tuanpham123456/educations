@@ -56,6 +56,16 @@ return[
                 ],
             ]
         ],
+        [
+            'name'  => 'User',
+            'class-icon'  => 'la la-user',
+            'sub'   => [
+                [
+                    'name'  => 'Thành viên',
+                    'route' => 'get_admin.user.index'
+                ],
+            ]
+        ],
 
 
     ]
