@@ -21,9 +21,11 @@ import FilePondUpload from '../components/_init_filepond'
 import SEO from '../components/_inc_seo'
 import Message from "../../../components/_inc_run_message";
 import Delete from "../components/_inc_delete";
+import Course from "../components/_inc_course";
 $(function (){
     FilePondUpload.init()
     SEO.init()
     Message.init()
     Delete.init()
+    Course.init()
 })

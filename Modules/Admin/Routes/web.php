@@ -56,6 +56,8 @@ Route::group(['prefix' => 'admin','middleware' => 'checkLoginAdmin'], function (
         Route::post('update/{id}','AdminCourseController@update');
 
         Route::get('delete/{id}','AdminCourseController@delete')->name('get_admin.course.delete')->middleware('permission:course_delete|full');;
+        // route thêm nội dung khóa học
+        Route::post('content/add/{id}','AdminCourseContentController@store')->name('get_admin.content.create')->middleware('permission:course_content_create|full');;
 
     });
     Route::group(['prefix' => 'slide'],function (){

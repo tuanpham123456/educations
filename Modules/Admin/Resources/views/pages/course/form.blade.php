@@ -16,7 +16,9 @@
                                     <!-- Tabs -->
                                     <ul class="nav panel-tabs main-nav-line">
                                         <li class="nav-item"><a href="#tab1" class="nav-link active" data-toggle="tab">Thông tin cơ bản</a></li>
+                                        @if(isset($course))
                                         <li class="nav-item"><a href="#tab2" class="nav-link" data-toggle="tab">Nội dung khóa học</a></li>
+                                        @endif
                                         <li class="nav-item"><a href="#tab3" class="nav-link" data-toggle="tab">Giới thiệu</a></li>
                                     </ul>
                                 </div>
@@ -120,15 +122,43 @@
                                         </div>
                                     </div>
                                     {{--tag 2--}}
+                                    @if(isset($course))
                                     <div class="tab-pane" id="tab2">
-                                        <p>dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                                        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime</p>
-                                        <p class="mb-0">placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                                       <div class="row">
+                                           <div class="col-sm-12">
+                                               <div class="row">
+                                                   <div class="col-sm-6">
+                                                       <div class="form-group">
+                                                           <label class="required" for="exampleInputEmail1"> Tiêu đề <span>(*)</span></label>
+                                                           <input type="text" class="form-control"  id="inputName" name="cc_name"  >
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-sm-3">
+                                                       <div class="form-group">
+                                                           <label class="required" for="exampleInputEmail1"> Tổng số video <span>(*)</span></label>
+                                                           <input type="text" class="form-control"  id="inputName" name="cc_total_video"  >
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-sm-3">
+                                                       <div class="form-group">
+                                                           <label class="required" for="exampleInputEmail1"> Bài tập <span>(*)</span></label>
+                                                           <input type="text" class="form-control"  id="inputName" name="cc_total_time"  >
+                                                       </div>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                        <label class="required" for="exampleInputEmail1"> Mô tả nội dung <span>(*)</span></label>
+                                        <textarea name="c_about" class="form-control" id="" cols="30" rows="4"></textarea>
+                                        <div class="col-sm-12" style="margin-top: 20px">
+                                        {{-- call ajax js-course-content resources/assets/valex/js/components/_inc_course.js--}}
+                                            <a href="{{ route('get_admin.content.create',$course->id) }}" class="btn btn-primary js-course-content"> Thêm mới</a>
+                                        </div>
                                     </div>
+                                    @endif
                                     {{--tag 3--}}
                                     <div class="tab-pane" id="tab3">
-                                        <p>praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,</p>
-                                        <p class="mb-0">similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                                        <textarea name="cc_content" class="form-control" id="" cols="30" rows="10">{{ $course->c_about ?? '' }}</textarea>
                                     </div>
                                 </div>
                             </div>

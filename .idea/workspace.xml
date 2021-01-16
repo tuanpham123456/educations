@@ -23,15 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87263d7a-f976-42ff-bb3e-ac35780a9209" name="Default Changelist" comment="mix backend admin">
-      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/user/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/user/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/user/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/user/update.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/assets/valex/js/components/_inc_course.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/course/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/pages/course/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/setting_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/setting_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js_admin/admin_dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js_admin/admin_dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/valex/js/pages/admin_dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/valex/js/pages/admin_dashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -374,6 +371,15 @@
       <workItem from="1610441832257" duration="63000" />
       <workItem from="1610442101073" duration="290000" />
       <workItem from="1610442475279" duration="767000" />
+      <workItem from="1610449709576" duration="3464000" />
+      <workItem from="1610456533108" duration="66000" />
+      <workItem from="1610457393724" duration="154000" />
+      <workItem from="1610457689092" duration="185000" />
+      <workItem from="1610458654222" duration="211000" />
+      <workItem from="1610459152030" duration="4000" />
+      <workItem from="1610459270988" duration="745000" />
+      <workItem from="1610624208809" duration="6401000" />
+      <workItem from="1610674933682" duration="353000" />
     </task>
     <task id="LOCAL-00001" summary="Css item course">
       <created>1603634294026</created>
@@ -711,7 +717,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610097456610</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Login Frontend&#10;-fake data user Frontend&#10;-create LoginController&#10;+ Show user register Backend&#10;-create AdminUserController">
+      <created>1610454652451</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1610454652451</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -730,7 +743,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="show courefree 0đ" />
     <MESSAGE value="show view course" />
     <MESSAGE value="show data course0đ" />
     <MESSAGE value="system data (slide) backend&#10;show _inc_banner &#10;Helper create function&#10;autoload" />
@@ -755,7 +767,8 @@
     <MESSAGE value="Role" />
     <MESSAGE value="role has permission" />
     <MESSAGE value="done phân quyền&#10;- create PermissionMiddleware.php&#10;add in kenner&#10;- add HasRoles into the Admin.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="done phân quyền&#10;- create PermissionMiddleware.php&#10;add in kenner&#10;- add HasRoles into the Admin.php" />
+    <MESSAGE value="Login Frontend&#10;-fake data user Frontend&#10;-create LoginController&#10;+ Show user register Backend&#10;-create AdminUserController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login Frontend&#10;-fake data user Frontend&#10;-create LoginController&#10;+ Show user register Backend&#10;-create AdminUserController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="292" key="#Composer" timestamp="1603628582271">
@@ -795,15 +808,15 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1610095612438" />
-    <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1603695620049">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1610625681579">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1603695620049" />
-    <state x="549" y="169" key="FileChooserDialogImpl" timestamp="1610441892660">
+    <state x="549" y="169" key="FileChooserDialogImpl" timestamp="1610459367054">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603700798100" />
-    <state x="549" y="169" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1610441892660" />
+    <state x="549" y="169" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1610459367054" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1606116814131">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -820,11 +833,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="604" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1610095531990" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1610097462653">
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1610454658065">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603976651077" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1610097462653" />
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1610454658065" />
     <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610097208726">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -843,11 +856,11 @@
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603955216936" />
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1609764190553" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1610442481213">
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1610628001634">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603975488859" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1610442481213" />
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1610628001634" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

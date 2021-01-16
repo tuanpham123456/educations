@@ -43574,6 +43574,31 @@ jQuery('.demo_changer .demo-icon').click(function () {
 
 /***/ }),
 
+/***/ "./resources/assets/valex/js/components/_inc_course.js":
+/*!*************************************************************!*\
+  !*** ./resources/assets/valex/js/components/_inc_course.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {var Course = {
+  init: function init() {
+    this.saveCourseContent();
+  },
+  saveCourseContent: function saveCourseContent() {
+    $(".js-course-content").click(function (event) {
+      event.preventDefault();
+      console.log('1');
+    });
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (Course);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
 /***/ "./resources/assets/valex/js/components/_inc_delete.js":
 /*!*************************************************************!*\
   !*** ./resources/assets/valex/js/components/_inc_delete.js ***!
@@ -43787,6 +43812,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_inc_seo__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/_inc_seo */ "./resources/assets/valex/js/components/_inc_seo.js");
 /* harmony import */ var _components_inc_run_message__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../components/_inc_run_message */ "./resources/assets/components/_inc_run_message.js");
 /* harmony import */ var _components_inc_delete__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/_inc_delete */ "./resources/assets/valex/js/components/_inc_delete.js");
+/* harmony import */ var _components_inc_course__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/_inc_course */ "./resources/assets/valex/js/components/_inc_course.js");
 
  // import './../../assets/plugins/moment/moment.js'
 
@@ -43810,11 +43836,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 $(function () {
   _components_init_filepond__WEBPACK_IMPORTED_MODULE_15__["default"].init();
   _components_inc_seo__WEBPACK_IMPORTED_MODULE_16__["default"].init();
   _components_inc_run_message__WEBPACK_IMPORTED_MODULE_17__["default"].init();
   _components_inc_delete__WEBPACK_IMPORTED_MODULE_18__["default"].init();
+  _components_inc_course__WEBPACK_IMPORTED_MODULE_19__["default"].init();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
